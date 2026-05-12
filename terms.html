@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Terms & Conditions – Metemi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #faf9f7;
+            --surface: #ffffff;
+            --ink: #1a1a1a;
+            --ink-secondary: #4a4a4a;
+            --ink-muted: #7a7a7a;
+            --accent: #1e3a5f;
+            --accent-light: #e8eef5;
+            --accent-mid: #3b6494;
+            --rule: #ddd8cf;
+            --highlight: #f0ece4;
+            --serif: 'DM Sans', Georgia, serif;
+            --sans: 'DM Sans', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            font-weight: 300;
+            line-height: 1.75;
+            padding: 0;
+        }
+
+        /* ── Header ── */
+        .doc-header {
+            background: linear-gradient(82deg,
+                    #20304f -14%,
+                    #e2373e 28%,
+                    #f4861e 93%);
+
+            color: white;
+            padding: 3.5rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .doc-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 60% 30%, rgba(255, 255, 255, 0.07) 0%, transparent 70%);
+        }
+
+        .doc-header .badge {
+            display: inline-block;
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.3em 0.9em;
+            border-radius: 2rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .doc-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.25;
+            color: white;
+            max-width: 700px;
+            margin: 0 auto 1rem;
+            border: none;
+            padding: 0;
+            background: none;
+            letter-spacing: 0.05rem;
+        }
+
+        .doc-header .meta {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.04em;
+        }
+
+        /* ── Layout ── */
+        .doc-layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 0;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .doc-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                display: none;
+            }
+        }
+
+        /* ── Table of Contents ── */
+        .toc {
+            position: sticky;
+            top: 2rem;
+            padding-right: 2rem;
+            border-right: 1px solid var(--rule);
+            font-size: 0.78rem;
+        }
+
+        .toc-label {
+            font-family: var(--sans);
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+        }
+
+        .toc ol li {
+            counter-increment: toc-counter;
+            margin-bottom: 0.1rem;
+        }
+
+        .toc ol li a {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            color: var(--ink-secondary);
+            text-decoration: none;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            transition: background 0.15s, color 0.15s;
+            line-height: 1.4;
+        }
+
+        .toc ol li a:hover {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .toc ol li a::before {
+            content: counter(toc-counter);
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--ink-muted);
+            min-width: 1.2em;
+            text-align: right;
+        }
+
+        /* ── Main Content ── */
+        .doc-content {
+            padding-left: 2.5rem;
+            max-width: 720px;
+        }
+
+        @media (max-width: 768px) {
+            .doc-content {
+                padding-left: 0;
+            }
+        }
+
+        .doc-content h1 {
+            display: none;
+            /* shown in header */
+        }
+
+        .doc-content h2 {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 3rem;
+            margin-bottom: 0.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid var(--rule);
+            line-height: 1.3;
+        }
+
+        .doc-content h2:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .doc-content h3 {
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--ink-secondary);
+            margin-top: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .doc-content p {
+            font-size: 0.93rem;
+            color: var(--ink-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .doc-content a {
+            color: var(--accent-mid);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .doc-content a:hover {
+            color: var(--accent);
+        }
+
+        .doc-content ul {
+            margin: 0.8rem 0 1.2rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .doc-content ul li {
+            position: relative;
+            padding: 0.65rem 0.9rem 0.65rem 1.5rem;
+            font-size: 0.9rem;
+            color: var(--ink-secondary);
+            line-height: 1.7;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .doc-content ul li:first-child {
+            border-top: 1px solid var(--rule);
+        }
+
+        .doc-content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0.4rem;
+            top: 1.1rem;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent-mid);
+            opacity: 0.5;
+        }
+
+        .doc-content strong {
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        /* ── Intro box ── */
+        .intro-box {
+            background: var(--accent-light);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 6px 6px 0;
+            padding: 1.1rem 1.3rem;
+            margin-bottom: 2rem;
+            font-size: 0.88rem;
+            color: var(--ink-secondary);
+            line-height: 1.75;
+        }
+
+        .intro-box p {
+            margin-bottom: 0.6rem;
+            color: inherit;
+        }
+
+        .intro-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ── Footer ── */
+        .doc-footer {
+            text-align: center;
+            padding: 2.5rem 1rem 3rem;
+            font-size: 0.78rem;
+            color: var(--ink-muted);
+            border-top: 1px solid var(--rule);
+            margin-top: 3rem;
+        }
+
+        .doc-footer a {
+            color: var(--accent-mid);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="doc-header">
+        <span class="badge">TERMS & CONDITIONS</span>
+        <h1>General Terms and Conditions of Use of the Metemi Application</h1>
+        <p class="meta">Metemi&nbsp;s.r.o. &nbsp;·&nbsp; Kaprova&nbsp;42/14, Prague&nbsp;1, Czech&nbsp;Republic</p>
+    </header>
+
+    <div class="doc-layout">
+        <nav class="toc">
+            <span class="toc-label">Contents</span>
+            <ol>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#s1">Definitions</a></li>
+                <li><a href="#s2">Registration &amp; Eligibility</a></li>
+                <li><a href="#s3">Use of the Service</a></li>
+                <li><a href="#s4">Licences</a></li>
+                <li><a href="#s5">Virtual Items &amp; Credit</a></li>
+                <li><a href="#s6">Premium Membership</a></li>
+                <li><a href="#s7">Account Termination</a></li>
+                <li><a href="#s8">Liability</a></li>
+                <li><a href="#s9">Complaints</a></li>
+                <li><a href="#s10">Dispute Resolution</a></li>
+                <li><a href="#s11">Governing Law</a></li>
+                <li><a href="#s12">Final Provisions</a></li>
+            </ol>
+        </nav>
+
+        <main class="doc-content">
+            <h1>GENERAL TERMS AND CONDITIONS OF USE OF THE METEMI APPLICATION</h1>
+            <h2 id="intro">Introduction</h2>
+            <p>This document sets out <strong>the General Terms and Conditions for using the Metemi
+                    application,</strong> which helps to create a social network and mutual interaction between real
+                people (hereinafter referred to as <strong>the "Terms and Conditions"</strong> ; and this application
+                hereinafter referred to as <strong>the "Service"</strong> ). The Service is provided by Metemi s.r.o.,
+                with its registered office at Kaprova 42/14, Staré Město, 110 00 Prague 1, Czech Republic, ID No.: 220
+                78 991, registered in the Commercial Register maintained by the Municipal Court in Prague under file
+                number C 410628, email: info@metemi.com (hereinafter referred to as <strong>the "Provider"</strong> ).
+                These Terms and Conditions govern the contractual relationship between the Provider and you as a user of
+                the Service (hereinafter referred to as <strong>the "User"</strong> ).</p>
+            <p>By using the Service or creating a user account, you express your agreement with these Terms and
+                Conditions, including our GDPR documentation (also containing the Privacy Policy) –
+                https://www.metemi.com/gdpr, and you undertake to comply with them. If you do not agree with the Terms
+                or GDPR documentation, please do not use this Service. The Provider may amend these Terms and GDPR
+                documentation – https://www.metemi.com/gdpr from time to time to a reasonable extent – you will be
+                notified of any significant changes (see Article 11 below).</p>
+            <p>Local differences and specifics of individual jurisdictions in which the Service is provided may be taken
+                into account in local addenda to the Terms and Conditions (hereinafter referred to as "
+                <strong>Addenda</strong> "). The provisions of the Addenda take precedence over the provisions contained
+                in these Terms and Conditions and, to the extent that the provisions overlap, replace them.
+                Relationships not governed by the Addenda are governed by these Terms and Conditions and the relevant
+                generally binding regulations.
+            </p>
+            <p>If the User is in a contractual relationship as a consumer under generally binding legal regulations
+                applicable at their place of habitual residence or registered office, nothing in these Terms and
+                Conditions limits or excludes any rights to which they are entitled as a consumer under the relevant
+                legal regulations.</p>
+            <h2 id="s1">1. Definitions</h2>
+            <p>For the purposes of these Terms and Conditions, the terms listed below shall have the following meanings:
+            </p>
+            <ul>
+                <li><strong>Provider</strong> – Metemi s.r.o., with its registered office at Kaprova 42/14, Staré Město,
+                    110 00 Prague 1, Czech Republic, ID No.: 220 78 991, registered in the Commercial Register
+                    maintained by the Municipal Court in Prague under file number C 410628, which operates the Service,
+                    see the information provided in the Introduction.</li>
+                <li><strong>User</strong> – any living natural person who meets the eligibility conditions under Article
+                    2 and uses the Service on the basis of a contractual relationship with the Provider.</li>
+                <li><strong>Service</strong> – an online service for connecting and interacting with Users provided by
+                    the Provider through the METEMI mobile application and, where applicable, related websites or
+                    platforms (collectively also referred to as <strong>the “Application”</strong> ), enabling Users to
+                    create profiles, communicate, establish contacts with other Users (including connecting with
+                    multiple Users at once), search for other Users located in their vicinity based on location data
+                    (the "Scanner"), and share their approximate and/or, if the User so chooses, current location with
+                    other Users.</li>
+                <li><strong>Account</strong> – a user account created by the User to access the Service, containing
+                    their profile data and User Content.</li>
+                <li><strong>User Content</strong> – all information, data, materials and content that Users enter,
+                    upload, publish or share within the Service (e.g. profile photos, personal description, bio,
+                    messages or other texts and media).</li>
+                <li><strong>Provider Content</strong> – all content of the Service that has been posted or provided by
+                    the Provider within the Service, including the design and structure of the Application, software,
+                    source code, texts, images, graphics, logos, trademarks, trade names and all other elements
+                    protected by intellectual property rights belonging to the Provider.</li>
+                <li><strong>Terms and Conditions</strong> – this document entitled “General Terms and Conditions of Use
+                    of the METEMI Application”, which contains the terms and conditions of the binding contract
+                    concluded between the Provider and the User. The use of the Application in the form of a mobile
+                    application is also subject to the terms and conditions of the operators of Google Play, the App
+                    Store or other services on which our mobile applications are offered (see Article 7 of these Terms
+                    and Conditions).</li>
+                <li><strong>Membership</strong> – a service provided as part of the Service that gives the User access
+                    to certain features depending on the type of Membership selected:</li>
+                <li><strong>Basic Membership</strong> – a free option providing the basic functions of the Service,
+                    allowing the purchase of certain Virtual Items for Virtual Credit;</li>
+                <li><strong>Premium Membership</strong> – a paid option based on recurring payments, which allows the
+                    User to obtain all Virtual Items, some of which are available without additional payment and others
+                    only for Virtual Credit.</li>
+                <li><strong>Virtual Items</strong> – digital elements or items offered as part of the Service, in
+                    particular various functions or benefits for the User, which can be obtained for Virtual Credit
+                    and/or by purchasing Premium Membership, as part of promotions or the Affiliate Programme (as
+                    defined below). Virtual Items are not tangible in nature and represent limited licence rights under
+                    Article 6 of these Terms and Conditions.</li>
+                <li><strong>Virtual Credit</strong> – a digital unit called " <strong>Metemi</strong> Coin" used
+                    exclusively within the Service to exchange for certain Virtual Items, which has limited validity.
+                    Virtual Credit can be purchased through third-party payment systems such as Google Pay, or it can be
+                    obtained for activity in accordance with these Terms, as part of the Affiliate Programme and
+                    promotional offers. Virtual credit is not a monetary unit (currency) or a means of payment, has no
+                    real value outside the Service, and cannot be exchanged back for real money or transferred between
+                    Users. The use of Virtual Credit is governed by Article 6 of these Terms and Conditions.</li>
+                <li><strong>Privacy mode</strong> – a feature available within the Service that allows the User to use
+                    the Account in such a way that it is not visible to other Users and does not appear in searches.
+                    When in Privacy mode, the User cannot search for other Users, but only for certain groups of Users.
+                    While the User has Privacy mode active, the features of the Service, including Premium membership,
+                    are available to them, and the duration of Premium membership or other time-limited services is
+                    still counted even during the activation of Privacy mode.</li>
+                <li><strong>Promo code</strong> – a one-time alphanumeric code generated by the Provider, which, when
+                    redeemed by the User, grants them access to Premium membership, extends an already active Premium
+                    membership, or grants access to any other Virtual item for a predetermined period of time without
+                    the need to pay the price, or thanks to which the User obtains Virtual credit without the need to
+                    pay the price. Promo codes can also be obtained through the Affiliate Programme (as described
+                    below).</li>
+            </ul>
+            <p>For simplicity, the text of the Terms uses the terms <strong>"you"</strong> or <strong>"User"</strong> in
+                the second person singular to refer to you as a User of the Service. The terms <strong>"we"</strong> or
+                <strong>"Provider"</strong> refer to the operator of the Service. Terms defined in this article are used
+                in the text with an initial capital letter.
+            </p>
+            <h2 id="s2">2. Conditions of registration and User eligibility</h2>
+            <p>The Service may only be used by natural persons who meet the conditions set out below. By creating an
+                Account and/or using the Service, you represent and warrant that:</p>
+            <ul>
+                <li><strong>Minimum age and legal capacity:</strong> You are a living natural person over <strong>the
+                        age of 18</strong> (i.e. you are not under the age of 18) and you have full legal capacity to
+                    perform all legal acts related to the acceptance and fulfilment of these Terms and Conditions,
+                    including GDPR documentation. The Service is not intended for persons under the age of 18.
+                    Furthermore, this Service is not intended for AI fictional persons or robots, regardless of whether
+                    they will be granted any legal status in the future by legislation. If you use the Service in a
+                    country where a higher age is required to use the Service and/or to accept these Terms and
+                    Conditions, including GDPR documentation, then you must meet that age limit in order to use the
+                    Service.</li>
+                <li><strong>Accuracy of data:</strong> All data that you provide to the Provider or other Users when
+                    registering or using the Service is true, accurate, complete, and not misleading. In the event of a
+                    change in data (e.g., a change of email address), you will update it on an ongoing basis to ensure
+                    that it remains true and up to date.</li>
+                <li><strong>No prohibition on use of the Service:</strong> Your use of the Service is not prohibited by
+                    any applicable law. You are not a person who has been prohibited by a public authority from using
+                    similar services, and you are not a person located in a country or subject to a jurisdiction that
+                    would prevent you from using the Service (for example, you must not be a person listed on
+                    international sanctions lists prohibiting the provision of services if this would constitute a
+                    violation of applicable law by the Provider).</li>
+                <li><strong>Good character:</strong> From the perspective of applicable laws, you are not considered a
+                    person who has been convicted of a serious criminal offence, in particular a sexual offence or a
+                    violent crime. Furthermore, you are not listed in any sex offender registry or similar public
+                    registry. By using the Service, you confirm that you do not pose a security risk to other Users.
+                </li>
+                <li><strong>One Account:</strong> You do not have more than one Account on the Service. Each User is
+                    entitled to have only one active Account.</li>
+                <li><strong>No Access Ban:</strong> The Provider has not previously removed or restricted you from the
+                    Service due to a violation of the Terms and Conditions or GDPR documentation or for inappropriate
+                    behaviour. If you have previously had an Account that was blocked or cancelled by the Provider for
+                    violating any rules, you are not permitted to create a new Account without the Provider's consent.
+                </li>
+            </ul>
+            <p>If at any time you cease to meet any of the above requirements, you are obliged to immediately stop using
+                the Service and delete your Account (see Article 7). The Provider is entitled to verify your identity,
+                age and other above-mentioned facts at any time (e.g. by requesting a copy of your ID or by other
+                appropriate means) and may suspend or terminate your access if it finds or has reasonable grounds to
+                suspect that you do not meet the Terms and Conditions.</p>
+            <h2 id="s3">3. Use of the Service and inappropriate behaviour</h2>
+            <p>You are obliged to use the Service in accordance with these Terms and Conditions, the Provider's
+                instructions and applicable law. When using the Service, you must behave decently and considerately
+                towards other Users. Any misuse of the Service or violation of the rules set out in these Terms and
+                Conditions, including the GDPR documentation, may result in the blocking or cancellation of your Account
+                (see Article 7), at the sole discretion of the Provider. Below are examples of prohibited behaviour when
+                using the Service and prohibited User Content:</p>
+            <h3>Prohibited behaviour</h3>
+            <p>In particular, the User must not do the following when using the Service:</p>
+            <ul>
+                <li><strong>Misrepresentation:</strong> You must not attempt to mislead the Provider or other Users
+                    about your identity, age, gender, or your relationship to another person or organisation. You must
+                    not impersonate another person, create fake profiles, or otherwise misrepresent your identity and
+                    the information you provide about yourself in User Content.</li>
+                <li><strong>Disruption of the Service:</strong> You may not use the Service in a manner that would
+                    damage or restrict the Service itself or prevent other Users from using it properly. In particular,
+                    it is prohibited to disrupt or overload the servers, networks or technical infrastructure of the
+                    Service in any way, attempt to overcome the security of the Service or gain unauthorised access to
+                    other people's Accounts or data. Furthermore, you may not upload viruses or malicious code to the
+                    Service or take any other action that could compromise the security or functionality of the Service.
+                </li>
+                <li><strong>Illegal and unethical use:</strong> You may not use the Service for any illegal, harmful,
+                    immoral or unethical purposes. It is prohibited to use the Service to commit any tortious acts, in
+                    particular criminal offences, fraud or any purposes that are contrary to good morals and generally
+                    accepted moral and ethical standards. It is also expressly prohibited to use the Service for money
+                    laundering, terrorist financing or any other financial machinations.</li>
+                <li><strong>Spam and similar harassment:</strong> You may not use the Service to send unsolicited bulk
+                    messages (spam), chain messages, obviously false information, harassing advertisements or other
+                    unsolicited commercial messages to other Users. You also may not solicit or elicit personal
+                    information from other Users for commercial or illegal purposes.</li>
+                <li><strong>Interference with personal integrity:</strong> Any harassment, bullying, stalking (unwanted
+                    surveillance or contact), threats, intimidation or other physical or psychological attacks and
+                    harassment of other Users is prohibited. You must refrain from defamation, insults, slander or other
+                    behaviour likely to cause harm to another person's honour, dignity or rights.</li>
+                <li><strong>Requests for money:</strong> It is not permitted to ask other Users for money, gifts or
+                    other assets, even under the pretext of a loan, investment, humanitarian aid, etc. Any attempts at
+                    financial fraud against others (e.g. so-called romantic fraud) are strictly prohibited.</li>
+                <li><strong>Disclosure of third-party data:</strong> You may not publish or disseminate the personal or
+                    sensitive data of other persons (e.g. full name, home address, telephone number, email address,
+                    photographs, etc.) on the Service without their express consent. Likewise, you may not request other
+                    Users to share their personal data outside the scope of the Service's functions.</li>
+                <li><strong>Multiple Accounts and Account Abuse:</strong> It is prohibited to create or use another
+                    User's Account. You may not sell, rent, or transfer your own Account to another person. Creating
+                    more than one Account per person (duplicate Accounts) is prohibited.</li>
+                <li><strong>Political and commercial activity:</strong> The Service may not be used to organise or
+                    promote political campaigns, election campaigns or to influence voting (sharing your personal
+                    political opinions within User Content is permitted, but using the Service as a political campaign
+                    tool is not). Similarly, it is not permitted to use the Service for commercial purposes without the
+                    Provider's consent – for example, the promotion of products, services, competitions or job offers is
+                    prohibited.</li>
+                <li><strong>Respecting the licence:</strong> You must not violate the terms of the licence and
+                    intellectual property rights of the Provider to the Provider's Content or the licence terms for the
+                    Service software. In particular, you may not copy, modify, decompile, reverse engineer, distribute
+                    or otherwise use the source code of the Service or the Provider's Content other than within the
+                    limits of normal use of the Service without the prior written consent of the Provider.</li>
+                <li><strong>Automated Tools:</strong> You may not use any robots, scrapers, crawlers or other automated
+                    means or processes to access the Service, obtain or collect data from the Service, or otherwise
+                    monitor the operation of the Service without the Provider's prior consent. Similarly, you may not
+                    circumvent measures (e.g., security restrictions) implemented to prevent or regulate access to the
+                    Service.</li>
+                <li><strong>Other violations of the Terms:</strong> You shall not encourage or induce others to violate
+                    these Terms. You also may not intentionally submit false or abusive reports to the Provider or
+                    administrators of the Service about alleged violations of the Terms by another User (e.g., falsely
+                    accusing someone of violating the Terms). Abuse of the reporting system is prohibited.</li>
+            </ul>
+            <h3>Prohibited content</h3>
+            <p>In addition to the above behaviour, it is prohibited to upload or share User Content on the Service that
+                is inappropriate or violates applicable law ( <strong>"prohibited content"</strong> ). Specifically, it
+                is prohibited to publish content that:</p>
+            <ul>
+                <li><strong>Illegal or harmful content:</strong> Violates any applicable law or promotes or approves
+                    illegal activity, or incites such activity. In particular, content must not incite illegal activity,
+                    contain child pornography, incite violence or hatred towards a group of people (hate speech), or
+                    otherwise contravene applicable laws and good morals.</li>
+                <li><strong>Harassing or hateful content:</strong> Content that is offensive, threatening, obscene,
+                    pornographic, sexually explicit (especially if publicly accessible), or content that spreads hatred,
+                    racism, xenophobia, homophobia, fanaticism, discrimination, or incites violence against an
+                    individual or group of persons.</li>
+                <li><strong>Violent or obscene material:</strong> It is prohibited to share violent, brutal or otherwise
+                    shocking images and materials that have no legitimate purpose (e.g. gratuitous depictions of
+                    violence or abuse). Furthermore, content must not promote self-harm or contain extreme pornography
+                    or depictions of sexual violence.</li>
+                <li><strong>Spam and advertising:</strong> Content that includes unsolicited commercial promotion, spam,
+                    chain letters, pyramid schemes, or other commercial communications unrelated to the purpose of the
+                    Service. Any offers of sexual services, escort services, "sugar daddy"/"sugar baby" relationships,
+                    financial slavery, or other forms of paid relationships are also prohibited.</li>
+                <li><strong>Malware and malicious code:</strong> Content containing viruses, Trojan horses, worms,
+                    spyware, adware or any other malicious code or software that could disrupt, damage or compromise the
+                    functionality of the Service or gain unauthorised access to data stored by the Provider within the
+                    Service.</li>
+                <li><strong>Infringing the rights of third parties:</strong> Content that infringes the rights of third
+                    parties, such as copyrights, trademark rights or other intellectual property rights, privacy rights
+                    and personality rights. This prohibition also includes the unauthorised publication of third-party
+                    photographs or personal data for which you do not have consent.</li>
+                <li><strong>Photographs of third parties or minors:</strong> It is prohibited to upload photographs or
+                    videos depicting other persons without their express prior consent. In particular, it is
+                    unacceptable to publish photographs of minors (under the age of 18) without the consent of a parent
+                    or legal guardian, or any material suggesting or implying the participation of a minor in sexual
+                    activities or activities with sexual undertones.</li>
+                <li><strong>Content unrelated to the purpose of the Service:</strong> Posts and materials that are
+                    clearly unrelated to the purpose of dating and communication within the Service are also prohibited.
+                    Your profile should serve to present yourself for the purpose of dating; content completely outside
+                    this area (e.g. product promotion, long political manifestos that may be considered political
+                    agitation, general posts unrelated to your personal profile, etc.) is prohibited.</li>
+                <li><strong>Damaging the reputation of the Provider:</strong> It is prohibited to upload or share
+                    content that defames the Service or the Provider itself, encourages its misuse, or intentionally
+                    damages the good name of the Provider or its trademarks and other designations. Criticism is
+                    permissible, but it must not be deliberate damage or slander spread within the Service.</li>
+            </ul>
+            <p>Uploading or distributing the above-described prohibited content within the Service is considered a
+                serious violation of these Terms and Conditions. The Provider reserves the right to assess whether
+                specific content or behaviour violates these rules.</p>
+            <p>If you upload or disseminate prohibited content within the Service, the Provider is entitled, at its sole
+                discretion, to ensure that such content is blocked, suspended or otherwise made inaccessible until it is
+                verified whether or not it is prohibited content. The Provider will give you a period of time to remedy
+                the situation. During this time, this content will not be accessible to other Users. If no remedy is
+                provided within the given period, the Provider has the right to permanently delete or make the
+                prohibited content inaccessible, and may further suspend or cancel your Account or restrict it in any
+                way, all at the Provider's sole discretion; such a decision by the Provider is final and cannot be
+                appealed.</p>
+            <h3>Reporting inappropriate behaviour or content</h3>
+            <p>The Provider does not tolerate inappropriate behaviour or content on the Service. We strive to maintain a
+                positive and respectful community of Users. We strongly encourage you to report any suspicious or
+                objectionable behaviour or content that you encounter on the Service.</p>
+            <p>To report a violation, you can use the function for reporting a User or content in the Service (e.g. the
+                "REPORT THIS USER" button). Alternatively, you can contact us via customer support at support@metemi.com
+                . Your report will be treated as confidential.</p>
+            <p>If the Provider receives a notification of prohibited content, it will evaluate it at its sole discretion
+                and, after taking measures to moderate the content, inform the notifier and the relevant User of how the
+                notification has been handled. The Provider will not take into account notifications that are
+                incomprehensible or unclear as to what content they refer to. If, in the course of administering the
+                Service, the Provider discovers a violation of generally binding legal regulations and/or these Terms
+                and Conditions, including GDPR documentation, or prohibited content, it may take measures in accordance
+                with these Terms and Conditions, even without a request from Users.</p>
+            <p>The Provider also reserves the right, if necessary, to share relevant information (including personal
+                data) with law enforcement authorities or other relevant authorities if this is necessary to investigate
+                the User's unlawful conduct or to ensure the safety of the community.</p>
+            <p>The User is not entitled to any compensation or refund from the Provider if the prohibited content has
+                been removed, blocked or deleted, or if their Account has been suspended or terminated for these
+                reasons.</p>
+            <h3>Location data and security</h3>
+            <p><strong>Tools you can enable:</strong> As part of the Service, <strong></strong> you can use the
+                <strong>Scanner</strong> feature, which allows you to find other Users or groups of Users located near
+                you (i.e., other Users can also find you or find and connect with a group of Users through this
+                feature). When using this tool, the Service displays the approximate distance of Users, but not their
+                exact location. Through the Service, you can also share your current location (known as shared location
+                on Google Maps) with Users of your choice at your own discretion and decision (it is never shared
+                automatically), which will be displayed on a map to the designated User or group of Users. Please note
+                that sharing your current specific location carries security risks, as the recipient can easily
+                determine your exact location.
+            </p>
+            <p><strong>Information collected by the Provider:</strong> To provide the Scanner function, the Application
+                obtains and processes location data from your mobile device, only after your prior approval, via GPS
+                technology and, if you approve, also via Bluetooth. When the Application is turned off, geolocation data
+                is not collected; unless you have approved the use of Bluetooth devices, then geolocation data may be
+                updated even outside of GPS signal. For details on the processing of location data, please refer to our
+                Privacy Policy, which please review at www.metemi.com/GDPR.
+            </p>
+            <p>We strongly recommend that you:</p>
+            <ul>
+                <li>always take the measures that are objectively necessary to ensure your safety, including with regard
+                    to the Scanner and current location sharing features,</li>
+                <li>avoid sharing information that could allow other Users to easily find, track, or threaten you in
+                    real life (e.g., your exact home address, workplace, regular routes, or other sensitive locations),
+                </li>
+                <li>Consider carefully with whom you share your current location and only use this feature if you trust
+                    the other person.</li>
+            </ul>
+            <h2 id="s4">4. Content and content rights</h2>
+            <p>Within the Service, you may encounter the following categories of content: <strong>(i)</strong> content
+                that you upload or enter into the Service ( <strong>"your" or "User Content"</strong> ),
+                <strong>(ii)</strong> content that other Users upload to the Service ( <strong>"Member Content</strong>
+                , <strong>"</strong> which is also User Content, only it comes from other Users), and
+                <strong>(iii)</strong> content that the Provider posts to the Service ( <strong>"Provider
+                    Content"</strong> or <strong>"our content"</strong> ). For the purposes of these Terms,
+                <strong>"content"</strong> means all text, images, photographs, videos, sounds, messages, data, software
+                and other information or materials available on the Service, including information on user profiles and
+                the content of private messages between Users. Below are the terms of use for each type of content.
+            </p>
+            <h3>User Content</h3>
+            <p><strong>Responsibility for your own content:</strong> As a User, you are fully responsible for all your
+                User Content. <strong>Therefore, do not share anything that you would not want to be made public, or
+                    anything that could violate the law or these Rules,</strong> including GDPR documentation <strong>or
+                    generally binding legal regulations.</strong></p>
+            <p><strong>Existence of rights and consents:</strong> You represent and warrant that you have all necessary
+                rights to the User Content you publish on the Service. This means that you are either the sole author or
+                have permission from the relevant owner/author to use the content and grant a licence to it under these
+                Terms.</p>
+            <p><strong>Accuracy of information:</strong> You agree to provide only accurate and unbiased information
+                within the Service. All information you provide in your profile or communicate to other Users must be
+                accurate and up to date. If you discover that any information is no longer accurate, you will
+                immediately correct or update it in your profile.</p>
+            <p><strong>Inappropriate content:</strong> It is expressly prohibited to post User Content that violates
+                these Terms and Conditions, including GDPR documentation – see the section on prohibited content above
+                (Article 3). The Provider is not obliged to check all User Content uploaded by Users in advance, but is
+                entitled to remove or modify any of your content at any time that, in its opinion, violates the Terms
+                and Conditions, including GDPR documentation, or is otherwise defective or illegal. The Provider is also
+                not responsible for any loss or damage to User Content – we recommend that you back up important
+                information outside of the Service.</p>
+            <p><strong>Compensation for damages:</strong> You bear full legal responsibility for your User Content. In
+                the event that a third party makes a claim against the Provider in connection with your content (e.g.,
+                someone claims that your content infringes their rights or causes harm), you agree to indemnify the
+                Provider for any losses, damages, penalties or costs (including reasonable legal fees) incurred by the
+                Provider as a result of such a claim – for more details, see Article 8 (Compensation).</p>
+            <h3>Licence to User Content granted to the Provider</h3>
+            <p><strong>Non-exclusive licence:</strong> By uploading, publishing or otherwise making your User Content
+                available on the Service, you automatically grant the Provider an unlimited, non-exclusive, transferable
+                and sub-licensable licence <strong>to use</strong> this content for purposes related to the operation,
+                promotion and improvement of the Service. This licence is granted <strong>free of charge</strong> (the
+                Provider does not pay you any remuneration) and the Provider may use it worldwide.</p>
+            <p>The Provider may therefore store your User Content on its servers, display it to other Users of the
+                Service, edit it for <strong>better display, or use it to provide and improve the Service</strong> . The
+                Provider may also obtain an exclusive licence to any derivative work it creates using the User Content –
+                such work is considered the Provider's Content and the Provider has the right to use it to provide and
+                improve the Service.</p>
+            <p><strong>Term of licence:</strong> You grant this licence for as long as the User Content is protected by
+                law. The licence does not expire even if your Account is cancelled or otherwise restricted.</p>
+            <p><strong>Nature of the licence:</strong> The licence granted to the Provider for your content is
+                <strong>non-exclusive</strong> , which means that you may continue to use your content as you wish or
+                grant a licence to other parties. However, with regard to the creation of derivative works as described
+                above, the Provider may, by its nature, have the status of an exclusive acquirer of rights. The licence
+                is also <strong>transferable and sublicensable</strong> , so that the Provider may transfer its rights
+                to another person or grant a sublicence to the Provider's suppliers if necessary to ensure the operation
+                of the Service.
+            </p>
+            <p><strong>Compliance with the law:</strong> The licence is granted on an unlimited basis for the purposes
+                of using, operating, promoting and developing the Service. The Provider will only use your content in
+                accordance with these Terms and Conditions, including GDPR documentation and applicable laws.
+                <strong>For example</strong> , if your content contains personal data (within the meaning of data
+                protection laws), its use will also be subject to privacy rules and legal restrictions (see Article 5
+                below).
+            </p>
+            <h3>Provider Content and User Licences</h3>
+            <p><strong>Provider Ownership:</strong> All Provider Content (as defined above) is the intellectual property
+                of the Provider or its licensing partners and is protected by applicable laws. All rights to trademarks,
+                logos, trade names, other designations, domain names and other elements associated with the Service
+                belong to the Provider (or its partners, as applicable), and the User is not authorised to use them
+                without consent.</p>
+            <p><strong>Licence for Users:</strong> The Provider hereby grants you a limited, personal, non-transferable,
+                non-exclusive and revocable licence to access and use the Provider's Content and the Service itself,
+                solely for the purpose of proper use of the Service in accordance with these Terms and Conditions,
+                including GDPR documentation. This licence allows you to use the Application and all its features for
+                your personal, non-commercial needs (i.e. to meet and communicate with other Users). Any other use of
+                the Provider's Content that is not expressly permitted by these Terms and Conditions (or directly by
+                law) is prohibited.</p>
+            <p><strong>Licence restrictions:</strong> Without the prior written consent of the Provider (or unless
+                expressly permitted by the features of the Service or a licence exception under applicable law), you may
+                not <strong>copy, modify, reproduce, distribute, publicly display, publish</strong> , create derivative
+                works from the Provider's Content, or otherwise use it for any public or commercial purposes. In
+                particular, you may not, without permission, create and publicly distribute a database of User profiles,
+                download other Users' photos in bulk, use parts of the Application in other software projects, etc. It
+                is also prohibited to circumvent any technical measures to protect the Provider's Content.</p>
+            <p><strong>Duration and termination of the licence:</strong> This licence to the Provider's Content shall
+                remain in force for the duration of this Agreement between you and the Provider (i.e. for as long as you
+                have an active Account and use the Service) and shall automatically terminate upon cancellation of your
+                Account (see Article 7) or upon your breach of these Terms and Conditions. In the event of a breach of
+                any restriction or prohibition set forth in these Terms and Conditions (in particular in Articles 3 and
+                4), the Provider is entitled to immediately terminate your access to the Service, and this licence
+                granted to you shall automatically terminate. Upon termination of the licence, you are no longer
+                entitled to use the Service or the Provider's Content in any way.</p>
+            <p><strong>Member content (content of other Users):</strong> Content posted to the Service by other Users is
+                protected in the same way as your content. You are entitled to use the content of other Users only
+                within the functions of the Service and for personal purposes (e.g. viewing profiles, communicating,
+                etc.). You may not copy, distribute outside the Service, or use other Users' content for other purposes
+                without the consent of the User concerned and, where applicable, the Provider. The Provider is not
+                responsible for Member Content – what other Users publish (e.g. profile information) is their
+                responsibility, and we do not provide any guarantees as to the accuracy of such content. If you
+                encounter objectionable content from another User, please report it to us (see above).</p>
+            <h2 id="s5">5. Privacy and personal data protection</h2>
+            <p>The protection of your personal data and privacy is a priority for the Provider. GDPR documentation,
+                including the Privacy Policy, is described in separate documents available at www.metemi.com/GDPR
+                <strong>,</strong> which we encourage you to read. By using the Service, you also agree to this GDPR
+                documentation.
+            </p>
+            <h2 id="s6">6. Premium Membership, Virtual Items, Virtual Credit and Payments</h2>
+            <p>The Service is free of charge in its basic form, but it may also offer paid premium features such as
+                Premium Membership or Virtual Items (hereinafter referred to as <strong>"Paid Services"</strong> ). This
+                section describes the terms and conditions of Premium Membership and the handling of Virtual Items and
+                Virtual Credit within the Service.</p>
+            <h3>Premium Membership</h3>
+            <p><strong>Premium Membership Offer:</strong> The Provider may offer Users the option to purchase Premium
+                Membership – i.e. time-limited access to certain Virtual Items that are otherwise available under Basic
+                Membership in exchange for Virtual Credit (see below), or that are not available at all to Users without
+                Premium Membership, in exchange for a regular fee paid by the User. In addition, even with Premium
+                Membership, some Virtual Items may still be subject to a fee. The specific offer and content of Premium
+                Membership will always be listed in the Application interface. By purchasing Premium Membership, you are
+                entering into a contract for the provision of a paid digital service. If the offer states that Premium
+                membership is <strong>automatically renewed</strong> , this means that after the paid period expires,
+                the subscription will automatically renew for another identical period unless you cancel it (see below).
+                Purchasing Premium membership will automatically activate it in the Application.</p>
+            <p><strong>Free Premium Membership:</strong> When a User orders Premium Membership for the first time, this
+                membership may be provided to the User free of charge for a period precisely defined in the offer in the
+                Application before the purchase is concluded. Each User may only take advantage of this benefit once.
+                The scope and content of the Services provided as part of the free Premium membership may be changed by
+                the Provider at any time, or the Provider may also cancel the free Premium membership at any time.</p>
+            <p><strong>Premium membership for early birds (Lifetime premium)</strong> :</p>
+            <p>The Provider may offer selected Users a special Premium membership option called "lifetime premium"
+                (hereinafter referred to as " <strong>Lifetime</strong> premium"), which is usually provided as part of
+                promotional offers for so-called <strong>early birds</strong> . Lifetime premium provides unlimited
+                access to Premium membership features. The User acknowledges that the scope, content and parameters of
+                Lifetime Premium are determined exclusively by the Provider and may be unilaterally changed, modified or
+                restricted by the Provider at any time, with effect for the future. Lifetime Premium does not entitle
+                the User to maintain the specific form or scope of services that were part of it when it was first
+                provided; the Provider's current offer valid at the time of using Lifetime Premium shall always apply,
+                the parameters of which are specified in the Application.</p>
+            <p><strong>Premium membership via Promo code:</strong> The User may also obtain or extend Premium membership
+                by applying a valid Promo code. The Promo code can be applied directly in the Application interface; its
+                activation results in the provision of Premium membership free of charge for the period and under the
+                conditions specified for the specific code. The Promo Code is non-transferable, can only be used once,
+                and cannot be exchanged for cash or other consideration. Upon expiry of the period for which the code
+                was provided, the Account reverts to the previously agreed mode (Premium/Basic Membership) and the
+                normal payment terms continue to apply.</p>
+            <p><strong>Virtual items included in Premium membership:</strong> As part of active Premium membership, the
+                Provider provides the user with access to selected Virtual items listed and described in more detail in
+                the current Premium membership offer specified in the Application, without the user being forced to
+                obtain these Virtual items by exchanging them for Virtual currency. The User may obtain other Virtual
+                Items as part of Premium Membership by exchanging them for Virtual Credit.</p>
+            <p><strong>Premium Membership and Privacy Mode:</strong> The User acknowledges that activating Privacy Mode
+                does not interrupt or suspend the duration of the Premium Membership. The period during which the User
+                has Privacy Mode active is counted towards the total Premium Membership period, regardless of whether
+                the User actually uses the Premium Membership during this time.</p>
+            <p><strong>Payment terms:</strong> The price of Premium membership is payable in advance for the entire
+                selected period, unless otherwise stated. Payment can be made in the manner specified in the Application
+                – via <strong>an external payment platform</strong> such as <strong>Google Pay</strong> . In this case,
+                the Provider does not store your payment details – the transaction is processed by a third party. Prices
+                are inclusive of all applicable taxes (including VAT), unless otherwise specified.</p>
+            <p><strong>Automatic renewal:</strong> For Premium Memberships agreed for a recurring period, you agree that
+                the Premium Membership will be automatically <strong>renewed</strong> for the same period until you
+                cancel it. This means that your chosen payment method will be automatically charged at the end of each
+                paid period for the following period. The Provider (or the Service) may notify you of an upcoming
+                automatic renewal (e.g. by email or notification), especially if there is a change in the price of
+                Premium membership. The Provider may change <strong>the price</strong> of Premium membership for future
+                periods; you will be notified of such a change with the option to cancel your Premium membership before
+                the next payment if you do not agree with the new price.</p>
+            <p><strong>Cancelling Premium membership:</strong> You can cancel your Premium membership at any time
+                (cancel automatic renewal) with effect from the end of the current subscription period. Cancellation can
+                be done directly in your Google Play Account subscription management. Simply deleting the Application
+                <strong>will not</strong> automatically <strong>terminate</strong> your Premium Membership subscription.
+                After cancelling your Premium Membership, you can continue to use the Service with Premium Membership
+                until the end of the paid period; you will not be charged for the next period, and after the paid period
+                expires, your Account will revert to the free basic mode under Basic Membership.
+            </p>
+            <p><strong>Right to withdraw from the contract – Premium membership:</strong> Please note that Premium
+                membership is a digital service that is provided with your prior express consent immediately after
+                purchase. By purchasing Premium Membership, <strong>you expressly request and agree that the provision
+                    of the Service will commence immediately before the expiry of the withdrawal period</strong> , and
+                <strong>you acknowledge that you thereby lose your right to withdraw from the contract within 14
+                    days</strong> . The user further agrees that a physical copy of the contract with the Operator is
+                not required and that all agreements between the parties are accessible in the Application and these
+                Rules. By purchasing a Premium membership, you <strong>cannot</strong> exercise the right of withdrawal
+                and request a refund, Virtual Credit, or other consideration.
+            </p>
+            <p><strong>Operation of the Service and changes:</strong> The Provider develops the Service and may add,
+                remove or modify individual features in the future, including features available as part of Premium
+                membership, including the scope and conditions of the Promo Code. This feature of Premium Membership may
+                therefore change over time, and in the event of such a change during a paid Premium Membership period,
+                you are not entitled to any compensation from the Provider. Temporary restrictions on certain features
+                (e.g. due to maintenance) do not constitute a breach of contract if the Service as a whole is
+                functional. The Provider also reserves the right to discontinue offering Premium Membership as such in
+                the future or to terminate the operation of the Service entirely (see Article 7 on termination). In the
+                event of permanent termination of the Service, any Premium Membership that has already been paid for
+                will be adequately resolved (e.g. proportional refund of unused payments).</p>
+            <p><strong>Consequences of non-payment of Premium Membership:</strong> If it is not possible to deduct the
+                payment for Premium Membership from your payment method, you will be notified and premium features may
+                be temporarily restricted. If the situation is not remedied (payment of the amount due) within a
+                reasonable period of time, the Provider may terminate your Premium Membership. Any attempt to
+                fraudulently charge back or unjustifiably claim a refund after paying for Premium membership may result
+                in the immediate blocking of your Account without compensation and the recovery of the Provider's costs.
+                If you have a problem with payment or are dissatisfied with the Service, please contact us first to
+                resolve the situation instead of unilaterally cancelling the payment.</p>
+            <h3>Virtual Items</h3>
+            <p><strong>Nature of Virtual Items:</strong> As part of the Service, you can purchase so-called
+                <strong>Virtual Items</strong> . These are intangible digital elements that provide Users with special
+                benefits or functions in the Service. Virtual items and a description of their functions are available
+                directly in the Application. Acquiring such an item does not result in a transfer of ownership – you
+                only acquire <strong>a limited licence</strong> to use it within the Service in accordance with these
+                Terms and Conditions.
+            </p>
+            <p><strong>Acquisition of Virtual Items:</strong> All Virtual Items can be acquired as part of Premium
+                Membership, either <strong>in exchange</strong> for Virtual Credit or as part of Premium Membership (if
+                such an item is provided as part of Premium Membership) or as part of promotional campaigns. Users
+                without a Premium Membership may only purchase certain Virtual Items, and only in exchange for Virtual
+                Credit, as currently offered. The exchange rate of Virtual Currency for Virtual Items will always be
+                clearly stated at the time of purchase. By exchanging Virtual Items for Virtual Credit, the relevant
+                Virtual Items will be credited to your Account, thereby granting you a temporary right to use them
+                within your Account; no claim to them outside the Service arises. You can only obtain Virtual Items from
+                the Provider (or its expressly authorised partners) and only through the Service interface – any other
+                method of acquisition (e.g. purchase from another User) is invalid and prohibited.</p>
+            <p><strong>Legal nature:</strong> Virtual Items <strong>are not real items</strong> . They represent a
+                contractual right (licence) between you and the Provider. It is not possible to exchange them back for
+                Virtual Credit or real money or to monetise them in any way outside the Service. The exchange rate
+                listed for Virtual Items is a value for the purposes of the Service and does not represent a claim on
+                Virtual Credit or funds.</p>
+            <p><strong>Licence Restrictions:</strong> The licence to Virtual Items is <strong>personal, non-transferable
+                    and limited</strong> by these Terms. You may not sell, transfer to another User or trade Virtual
+                Items outside the Service. Any attempt to transfer or sell Virtual Items (e.g., offering an Account with
+                a Virtual Item on the internet) is considered a violation of these Terms. Virtual Items can only be
+                redeemed (used) through the features provided in the Service – nowhere else.</p>
+            <p><strong>Validity and expiry:</strong> Licences for Virtual Items are valid for 12 months from the date of
+                acquisition (unless otherwise stated in the Application) or for the period of validity specified in the
+                Application, but no longer than for the duration of your Account. In the event of Account termination
+                (whether at your request or at the Provider's discretion), <strong>your right to use any unused Virtual
+                    Items shall also expire</strong> . Similarly, the licence to Virtual Items may expire if the
+                Provider ceases to provide the Service as a whole (e.g. terminates the operation of the Application) –
+                in such a case, the licence shall expire on the date of termination of the Service. Once the licence
+                expires, you are no longer entitled to use the Virtual Item or claim any compensation.</p>
+            <p><strong>Management and changes to Virtual Items:</strong> The Provider reserves the right <strong>to
+                    manage, modify, change or cancel</strong> Virtual Items or their availability at any time at its
+                sole discretion. For example, it may change the amount of Virtual Credit required to obtain a Virtual
+                Item, introduce new types of items, change the scope and content of existing items, or discontinue
+                offering certain items. The Provider shall not be liable to you or any third party for any modifications
+                to the Virtual Item system. In this regard, the Provider is not obliged to provide any compensation for
+                any Virtual Item that has been modified or cancelled in this way.</p>
+            <p><strong>Finality and Irrevocability:</strong> All exchanges and redemptions of Virtual Items are
+                <strong>final and irrevocable</strong> . This means that once you exchange Virtual Credit for a Virtual
+                Item, <strong>you are not entitled</strong> to a refund of the Virtual Credit (or the corresponding
+                amount of funds), even if you do not use the item. Similarly, once a Virtual Item has been used
+                (consumed), this action cannot be reversed. You acknowledge that the Provider <strong>is not obliged to
+                    provide compensation</strong> for unused Virtual Items or any other compensation for Virtual Items
+                remaining in the Account at the time of Account cancellation (whether on your initiative or due to a
+                breach of the Terms and Conditions). The same applies to Promo Codes – once redeemed, they cannot be
+                exchanged for cash or transferred to another Account.
+            </p>
+            <p><strong>Right to withdraw from the contract – Virtual Items:</strong> Please note that Virtual Items are
+                a digital service that is provided with your prior express consent immediately after purchase. By
+                purchasing or otherwise obtaining Virtual Items <strong>, you expressly agree that the provision of the
+                    service represented by the Virtual Item will commence before the expiry of the withdrawal
+                    period</strong> , and <strong>you acknowledge that you thereby lose your right to withdraw from the
+                    contract within 14 days</strong> . The user further agrees that a physical copy of the contract with
+                the Operator is not required and that all agreements between the parties are accessible in the
+                Application and these Rules. By purchasing Virtual Items, you <strong>cannot</strong> exercise the right
+                of withdrawal and request a refund, Virtual Credit, or other consideration.</p>
+            <h3>Virtual Credit</h3>
+            <p><strong>Nature of Virtual Credit:</strong> You can obtain Virtual Credit as part of the Service. These
+                are intangible digital elements that the User can exchange for Virtual Items.</p>
+            <p><strong>Purchase and acquisition:</strong> Virtual Credit can be obtained either <strong>by purchasing
+                    it</strong> with real money through Google Pay payment services, by fulfilling the conditions of the
+                Affiliate Programme (see below), based on User activity (see below), or as part of the Provider's
+                promotional activities. The price and quantity of Virtual Credit units will always be clearly stated at
+                the time of purchase. By purchasing Virtual Credit, the corresponding amount of Virtual Credit will be
+                credited to your Account, thereby granting you the temporary right to use it within your Account, solely
+                for the purpose of exchanging it for Virtual Items; no claim to it outside the Service arises. You may
+                only purchase Virtual Credit from the Provider (or its expressly authorised partners) and only through
+                the Service interface – any other method of acquisition (e.g. purchase from another User) is invalid and
+                prohibited.</p>
+            <p><strong>Affiliate programme:</strong> As part of the Affiliate programme, the User may receive free
+                Virtual Credit, a special Promo Code, Premium Membership, Premium Membership extension and/or specific
+                Virtual Items (or other benefits at the Operator's discretion) as a reward for recommending new Users
+                who register and meet the Provider's pre-defined conditions. The detailed terms and conditions of the
+                Affiliate Programme and individual rewards are specified directly in the Application, and the
+                Application will guide the User through the details of the Affiliate Programme (e.g. how to generate an
+                affiliate link or a specific affiliate Promo code, etc.). The Provider reserves the right to change or
+                terminate the Affiliate Programme at any time, to modify the terms and conditions of its operation, to
+                refuse to provide Virtual Credit or other rewards provided in this manner, or to withdraw Virtual Credit
+                or other rewards already granted in the event of suspected fraudulent behaviour or other violations of
+                the Terms and Conditions. The amount of Virtual Credit or rewards that the User receives for completing
+                the Affiliate Programme is stated directly in the User's Account in the Application interface.</p>
+            <p><strong>Virtual Credit for User Activity:</strong> Virtual Credit can also be earned based on the User's
+                activity in the Application (e.g., length of time spent in the Application, number of active
+                connections, etc.). The specific incentive and its details will be listed directly in the Application,
+                and the incentive is valid after its presentation in the Application. The User acknowledges that the
+                Application may send notifications regarding these incentives, as well as the status of their use and
+                validity. If the User collects this reward within the period specified in the incentive or notification
+                received, the relevant amount of Virtual Credit will be credited to their Account. The Provider reserves
+                the right to modify or terminate the activity reward system at its discretion.</p>
+            <p><strong>Legal nature:</strong> Virtual Credit is not a monetary unit (currency) or a thing. It represents
+                a contractual right (licence) between you and the Provider. It cannot be exchanged back for real money
+                or monetised in any way outside the Service. The price listed for Virtual Credit when purchased is a
+                value for the purposes of the Service and does not represent a claim to money. Any "balance" of Virtual
+                Credit in your Account is only an indicator of the extent of unused licence – it is not electronic
+                money, a deposit or property value.</p>
+            <p><strong>Licence Restrictions:</strong> The licence to Virtual Credit is <strong>personal,
+                    non-transferable and limited</strong> by these Terms. You may not sell, transfer to another User or
+                trade Virtual Credit outside the Service. Any attempt to transfer or sell Virtual Credit (e.g., offering
+                an Account with Virtual Credit on the internet) is considered a violation of these Terms. Virtual Credit
+                can only be redeemed (used) through the features provided in the Service – nowhere else.</p>
+            <p><strong>Validity and expiry:</strong> The licence for Virtual Credit / validity of Virtual Credit lasts
+                for 12 months from the date of crediting to the Account (unless otherwise stated in the Application) or
+                for the period of validity specified in the Application, but no longer than the existence of your
+                Account. In the event of Account cancellation (whether at your request or at the Provider's discretion),
+                <strong>your right to use any unused Virtual Credit shall also expire</strong> . Similarly, the licence
+                to Virtual Credit may expire if the Provider ceases to provide the Service as a whole (e.g. terminates
+                the operation of the Application) – in such a case, the licence shall expire on the date of termination
+                of the Service. Once the licence expires, you are no longer entitled to use Virtual Credit or claim
+                compensation for it.
+            </p>
+            <p><strong>Management and changes to Virtual Credit:</strong> The Provider reserves the right <strong>to
+                    manage, modify, change or cancel</strong> Virtual Credit or its availability at any time at its sole
+                discretion. For example, it may change the amount of funds required to obtain Virtual Credit. The
+                Provider shall not be liable to you or any third party for any modifications to the Virtual Credit
+                system. In this regard, the Provider is not obliged to provide any compensation for Virtual Credit that
+                has been modified or cancelled in this way.</p>
+            <p><strong>Finality and non-refundability:</strong> All purchases of Virtual Credit are <strong>final and
+                    non-refundable</strong> . This means that once you purchase Virtual Credit, <strong>you are not
+                    entitled</strong> to a refund of the amount paid, even if you do not use the Virtual Credit.
+                Similarly, once Virtual Credit has been exchanged (used) for Virtual Items, this action cannot be
+                reversed. You acknowledge that the Provider <strong>is not obliged to provide compensation</strong> for
+                unused Virtual Credit, and you will not receive any monetary or other compensation for Virtual Credit
+                remaining in your Account at the time of Account cancellation (whether on your initiative or due to a
+                breach of the Terms and Conditions).</p>
+            <p><strong>Compliance with tax obligations:</strong> The User acknowledges that the User is solely
+                responsible for complying with any tax obligations to the relevant tax authority arising from the User's
+                acquisition of Virtual Credit. The Provider bears no responsibility for the User's tax obligations and
+                does not provide any tax advice.</p>
+            <p><strong>Right of withdrawal – Virtual Credit:</strong> Please note that Virtual Credit is a digital
+                service that is provided with your prior express consent immediately after purchase. By acquiring
+                Virtual Credit, <strong>you expressly agree that the provision of the service will commence before the
+                    expiry of the withdrawal period</strong> and <strong>acknowledge that you thereby lose your right to
+                    withdraw from the contract within 14 days</strong> . The user further agrees that a physical copy of
+                the contract with the Operator is not required and that all agreements between the parties are
+                accessible in the Application and these Rules. By obtaining virtual credit, you <strong>cannot</strong>
+                exercise the right of withdrawal and request a refund or other consideration.</p>
+            <h3>Promo code</h3>
+            <p><strong>Terms of use:</strong> The specific terms and conditions for using the Promo Code are always
+                stated in the Application when it is offered or redeemed.</p>
+            <p><strong>Changeability:</strong> The User acknowledges that the Promo Code does not constitute a claim to
+                specific performance and its use is governed by the Provider's current offer at the time of redemption.
+                The Provider is entitled to unilaterally change the terms of use of the Promo Code, its value or the
+                scope of benefits at any time, with effect for the future.</p>
+            <h2 id="s7">7. Termination of the contract and cancellation of the Account</h2>
+            <p>This section describes the ways in which the contractual relationship between you and the Provider
+                regarding the Service may be terminated and the consequences of such termination.</p>
+            <p><strong>Voluntary termination on your part:</strong> If you no longer wish to use the Service, you have
+                the right to cancel your Account at any time and thereby terminate this contract. You can delete your
+                Account directly in the Application – in the <strong>Settings</strong> section, select <strong>"Delete
+                    Account"</strong> and complete the process by following the instructions (the Service may ask you to
+                enter your password or confirm by email for verification purposes). Please note that Account
+                cancellation is <strong>irreversible</strong> – your User Content will be made inaccessible, anonymised
+                or deleted (according to the principles described below and in the Privacy Policy). If you have an
+                active Premium membership in the Application purchased through an external platform (e.g., Google Play),
+                you may need to cancel it separately through that platform, otherwise you may continue to be charged.
+            </p>
+            <p><strong>Termination or suspension by the Provider:</strong> The Provider reserves the right at any time
+                (even without prior notice) <strong>to suspend, restrict or terminate your access to the
+                    Service</strong> or to completely cancel your Account if it has a legitimate reason to do so. Such
+                reasons include, in particular:</p>
+            <ul>
+                <li><strong>Violation of the Terms and Conditions:</strong> If you violate these Terms and Conditions or
+                    the GDPR documentation or other binding instructions of the Provider, your Account may be blocked or
+                    cancelled without compensation. Serious violations include, in particular, the publication of
+                    prohibited content (Article 3) or inappropriate behaviour towards other Users (harassment, fraud,
+                    etc.), as well as infringement of intellectual property rights, misuse of payments, etc.</li>
+                <li><strong>Misuse of the Service:</strong> If you misuse the Service in any way for unfair purposes,
+                    spamming, manipulation, or if your activity leads to a threat to the functionality, security or
+                    reputation of the Service or the Provider, we may terminate your access immediately.</li>
+                <li><strong>Inactivity:</strong> The Provider has the right to cancel or archive Accounts that have been
+                    inactive for a long time. If you do not log into your Account for more than 12 months, your Account
+                    may be marked as inactive and the Provider may cancel and delete it after prior notice.</li>
+                <li><strong>Legal reasons:</strong> If required by law or a final decision of a court or other
+                    authority, your Account may be made inaccessible or deleted. Similarly, if the continued provision
+                    of the Service to you would be unlawful (e.g., there is a change in applicable law that prohibits
+                    you from continuing to use the Service), the Provider may terminate your access.</li>
+            </ul>
+            <p>The Provider may (but is not obliged to) first attempt to notify you of the impending action related to
+                the existence of your Account (e.g. by sending a warning email or message in the Application) and give
+                you the opportunity to remedy the situation.</p>
+            <p><strong>Consequences of termination:</strong> Upon termination of your Account (whether by you or the
+                Provider), you will no longer have access to the Service. Your User Content will be deleted or
+                anonymised so that you cannot be identified. The Provider may retain certain technical and operational
+                records of your Account for as long as necessary to comply with legal obligations or to protect
+                legitimate interests (e.g. consent logs, payment records, communication records for potential disputes).
+                This data will be processed in accordance with the Privacy Policy.</p>
+            <p>Upon cancellation of your Account, <strong>you are not entitled to any compensation</strong> for unused
+                services. This means that <strong>no refunds will be given</strong> for any unused Premium Account
+                period or for any unused Virtual Items and Virtual Credit in your account at the time of cancellation.
+                This applies both to voluntary termination on your part and to termination due to a breach of the Terms.
+            </p>
+            <p><strong>Effects on contractual arrangements:</strong> Even after termination of participation in the
+                Service, certain provisions of these Terms and Conditions, which by their nature are intended to
+                survive, remain in force. In particular, the provisions on limitation of liability, disclaimer of
+                warranties, governing law, licensing of User Content, dispute resolution and indemnification shall
+                remain binding even after the termination of the agreement of which these Terms are a part. Termination
+                of your account does not mean that you are not liable, for example, for any damages caused by a breach
+                of the Terms during the period in which you used the Service.</p>
+            <p><strong>Cancellation of the entire Service by the Provider:</strong> The Provider may decide to
+                completely terminate the operation of the Service as such. In such a case, it will inform all active
+                Users of this fact in advance (e.g. by email and notification in the Application) and provide
+                instructions regarding any refunds or compensation. After the date of termination of the Service, all
+                Accounts will be made inaccessible and the data will be deleted in accordance with the Privacy Policy.
+                The Provider may also unilaterally transfer (assign) its obligations under this Agreement to another
+                entity that will continue to provide the Service (e.g. when transferring the Service/Application to
+                another person) – in such a case, Users will be informed.</p>
+            <h3>8. Additional terms and conditions relating to the mobile Application</h3>
+            <p>When using the Services provided within the Application via mobile applications, you may be subject to
+                the terms and conditions of the operator of Google Play or other services on which our mobile
+                applications are offered, even if they are not expressly mentioned in Article 8 of these Terms and
+                Conditions.</p>
+            <p><strong>Application available on Google Play</strong> . When using the Service in the form of a mobile
+                application available on Google Play, the following terms and conditions also apply:</p>
+            <ul>
+                <li>If you are considered a minor in your country, you need the consent of a parent or legal guardian to
+                    use the Application and accept the Terms. If additional age restrictions apply to the use of
+                    specific content or features of the Application, you must comply with them. The content of the Terms
+                    remains unaffected.</li>
+                <li>Please contact us if you experience any problems, defects or difficulties with the performance of
+                    the Application. Google is not responsible for the support and maintenance of the Application. We
+                    will respond promptly to any support or product issues that Google deems urgent.</li>
+                <li>If the Application is removed from Google Play due to (i) infringement of a third party's
+                    intellectual property rights, (ii) infringement of third-party rights, or (iii) allegations or
+                    findings that the Application does not comply with applicable laws, and you have paid the price for
+                    using the Application during the one-year period prior to the date of discontinuation of
+                    distribution of the Application through Google Play, we will refund you, at Google's request, all
+                    amounts you paid for such product during that one-year period.</li>
+            </ul>
+            <h2 id="s8">9. Liability and Limitation of Warranties</h2>
+            <p>This section contains the Provider's limitations of liability. Please read it carefully, as it defines
+                the extent to which the Provider is not liable for any damage or harm related to the use of the Service.
+                However, nothing in this section is intended to limit your rights that cannot be contractually excluded
+                under applicable law (in particular, statutory consumer rights).</p>
+            <h3>Limitation of Liability</h3>
+            <p>The Service is provided on <strong>an "as is" and "as available</strong> " basis. The Provider will use
+                reasonable efforts to ensure that the Service functions reliably and securely, but <strong>does not
+                    provide any guarantees</strong> regarding its quality, accuracy, uninterrupted availability or
+                suitability for your specific expectations. It is expressly stated that:</p>
+            <ul>
+                <li><strong>No guarantee of results:</strong> The Provider <strong>does not guarantee</strong> that you
+                    will find a suitable partner through the Service, establish a relationship, or achieve any specific
+                    personal goal. The Service only facilitates contact between Users, but the actual result depends on
+                    many circumstances beyond the Provider's control. <strong>For example</strong> , there is no
+                    guarantee that there will be enough compatible Users in your location or that the person you contact
+                    will respond.</li>
+                <li><strong>Availability and accuracy:</strong> The Provider does not guarantee that the Service will be
+                    available <strong>24/7</strong> or that it will always be <strong>free of errors or bugs</strong> .
+                    Temporary outages, delays, restrictions or errors may occur (e.g. due to technical reasons such as
+                    maintenance, updates, internet outages, etc.). The Provider endeavours to correct errors as soon as
+                    possible, but does not guarantee their complete absence. The Service is provided in its current
+                    quality, taking into account the Provider's capabilities, without any guarantees regarding
+                    functionality or perfection.</li>
+                <li><strong>Compatibility:</strong> The Provider does not guarantee that the Service will work on all
+                    devices, operating systems or browsers. It is your responsibility to use the current version of the
+                    Application and an appropriate device with an internet connection. The use of outdated versions or
+                    unsupported devices may result in malfunction, for which the Provider is not responsible.</li>
+                <li><strong>Content and information:</strong> The Provider does not guarantee or otherwise accept
+                    responsibility for the accuracy, completeness or truthfulness of the information and content that
+                    appears in the Service. This applies in particular to User Content – the Provider does not guarantee
+                    that the information provided by Users is true. Similarly, we do not claim that all content on the
+                    Service will meet your expectations (you may encounter content that you consider inappropriate, even
+                    though it does not violate the Rules). The Provider is not responsible for the actions of Users and
+                    is not liable for the content they share.</li>
+                <li><strong>Security and viruses:</strong> Although the Provider strives to secure the Service,
+                    <strong>it does not guarantee</strong> 100% security and resistance to all cyber threats. Any
+                    material downloaded or otherwise obtained through the Service is downloaded at your own risk. The
+                    Provider is not responsible for any damage to your hardware, software, equipment, data or other
+                    property resulting from your use of the Service, including damage caused by viruses, malware,
+                    phishing, unauthorised interference (hacker attacks), security vulnerabilities or similar risks,
+                    unless such damage was caused by demonstrable intentional action on the part of the Provider.
+                </li>
+                <li><strong>No warranties regarding Users:</strong> The Provider does not verify each User and
+                    <strong>is not responsible for the identity, character, intentions or actions of other
+                        Users</strong> . We do not guarantee that User profiles are authentic or that Users communicate
+                    in good faith. All interactions are made at your own discretion and risk. The Provider shall not be
+                    liable for any damage resulting from meetings or communication with other Users (e.g. non-property
+                    damage, loss of property, physical injury, etc.). When meeting someone in person, always use common
+                    sense and take precautions for your own safety.
+                </li>
+                <li><strong>Technical faults and loss of data:</strong> The Provider shall not be liable for any damage
+                    caused by the loss of User data or other content if this occurs as a result of technical problems or
+                    third-party interference and the Provider has demonstrably made reasonable efforts to secure the
+                    data. We recommend that you do not store the only copies of important data in the Service and that
+                    you regularly create backups outside the Service. The Provider is also not liable for damage caused
+                    by any viruses, malware or other malicious code that third parties may smuggle into the Service
+                    without the Provider's knowledge. Any uploading and downloading of content from the Service is done
+                    at your own risk.</li>
+                <li><strong>Third-party services:</strong> The Service may contain advertisements, links or connections
+                    to third-party websites or services (e.g. links to other applications, partner banners). The
+                    Provider is not responsible for the availability or content of these external websites or services,
+                    nor does it endorse them in any way. If you respond to such an advertisement (e.g. by opening it),
+                    use offers or services of third parties displayed within the Service, you do so at your own risk and
+                    any contractual relationships arise only between you and the third party concerned. The Provider
+                    shall not be liable for the performance or any damage resulting from these external services.</li>
+                <li><strong>Tax obligations:</strong> The User acknowledges that the User is solely responsible for
+                    fulfilling any tax obligations to the relevant tax administrator, arising in particular from the
+                    receipt of any performance from the Provider within the Application. The Provider shall not be
+                    liable for the User's tax obligations and does not provide any tax advice.</li>
+                <li><strong>Limitation of liability</strong> : To the maximum extent permitted by law, the Provider
+                    shall not be liable for any indirect, incidental, consequential, punitive or special damages,
+                    including lost profits, loss of data, unauthorised benefits or damages resulting from a conflict of
+                    contractual provisions. <strong>The Provider's total liability to the User for damages in connection
+                        with the use of the Service or these Terms and Conditions shall not exceed EUR 100</strong> .
+                </li>
+            </ul>
+            <p>The limitations under this article do not apply to liability that cannot be contractually limited or
+                excluded under applicable law. Nothing in this article limits the statutory rights of users as consumers
+                under applicable law.</p>
+            <h3>Compensation for damages incurred by the Provider</h3>
+            <p><strong>Compensation</strong> for <strong>damages by the User:</strong> You undertake to compensate the
+                Provider in full for any damages incurred if, as a result of your unlawful conduct, breach of these
+                Terms and Conditions or violation of the rights of third parties on your part, the Provider incurs any
+                damages or costs, or a claim is made against the Provider by a third party. This includes the obligation
+                to compensate the Provider for all direct damages, loss of profit, monetary penalties, fines,
+                non-pecuniary damages, as well as reasonable legal costs incurred by the Provider as a result of: (a)
+                User Content provided by you, (b) your actions in violation of the law or these Terms and Conditions, or
+                (c) your dispute with another User. <strong>For example:</strong> if your inappropriate behaviour causes
+                harm to another User and that User makes a claim against the Provider, you agree to settle such claim
+                and protect the Provider from any obligation to pay compensation.</p>
+            <h2 id="s10">10. Dispute resolution</h2>
+            <p>In the event of dissatisfaction, complaints or disputes arising in connection with this Service or these
+                Terms and Conditions, please first contact the Provider's customer support (
+                <strong>support@metemi.com</strong> ). Please provide as much information as possible about the problem
+                and your requirements for a solution. The Provider will endeavour to resolve the problem to your
+                satisfaction.
+            </p>
+            <p>If you are <strong>a consumer</strong> (i.e. you use the Service outside the scope of your business or
+                profession) and the dispute cannot be resolved directly with the Provider, you have the right to use the
+                option of <strong>out-of-court consumer dispute resolution</strong> .</p>
+            <p>Entities for the out-of-court resolution of consumer disputes in the European Union, Iceland and Norway
+                are listed on the European Commission's website, which is regularly updated (
+                https://consumer-redress.ec.europa.eu/dispute-resolution-bodies_en?prefLang=cs&etrans=cs ). All of these
+                entities have been approved by the relevant national authorities as meeting the standards of quality,
+                impartiality and fairness under Directive 2013/11/EU on alternative dispute resolution for consumer
+                disputes concerning fairness, effectiveness and accessibility.</p>
+            <p>If you are not a consumer (e.g. you would use the Service for business purposes), or if out-of-court
+                dispute resolution is not possible or unsuccessful, disputes will be resolved in court in accordance
+                with Article 11 below.</p>
+            <h2 id="s11">11. Governing law and jurisdiction</h2>
+            <p>All legal relationships between the Provider and the User arising from or in connection with the use of
+                the Service shall be governed by the laws <strong>of the Czech Republic</strong> and the relevant
+                consumer protection regulations, excluding the conflict of law rules of private international law.
+                However, some countries (including European Union countries) have laws that require contracts to be
+                governed by the local laws of the consumer's country or provide consumers with a higher level of
+                protection. This provision shall not take precedence over such laws.</p>
+            <p>All disputes arising from these Terms and Conditions or in connection with the use of the Service shall
+                be settled by the competent courts of the Czech Republic, unless you are entitled under binding legal
+                regulations to initiate legal proceedings in your country of residence or unless we are obliged to
+                initiate legal proceedings in your country of residence. The contracting parties hereby agree that the
+                general courts of the Czech Republic shall have jurisdiction to decide disputes. The court with local
+                jurisdiction for any disputes between you and the Provider shall be the court with jurisdiction
+                according to the Provider's registered office, unless the law stipulates the exclusive jurisdiction of
+                another court for a specific dispute.</p>
+            <p>Disputes with the Provider may only be resolved individually. You may not bring claims as a plaintiff or
+                class member in a class, consolidated or representative action. Class arbitration, class actions,
+                private attorney actions, and consolidation with other arbitrations are not permitted. If this specific
+                paragraph is found to be unenforceable, this provision shall be deemed severable from the other parts of
+                the Terms and shall be deemed invalid (while the remainder of the Terms shall remain valid).</p>
+            <h2 id="s12">12. Final provisions</h2>
+            <ul>
+                <li><strong>Changes to the Terms and Conditions:</strong> The Provider is entitled to unilaterally
+                    <strong>change or amend</strong> these Terms and Conditions at any time. The Provider will inform
+                    you in advance of any significant changes, either by email sent to your registered Account address
+                    or by notification in the Service or Application interface. The updated version of the Terms and
+                    Conditions will always be available in the Application with the effective date indicated. If you do
+                    not agree with the new version of the Terms and Conditions, you have the right to terminate your use
+                    of the Service and delete your Account in accordance with Article 7. Your continued use of the
+                    Service after the effective date of the amended Terms and Conditions will be considered as your
+                    acceptance of the new version.
+                </li>
+                <li><strong>Assignment of the contract:</strong> The Provider is entitled to transfer or assign the
+                    rights and obligations under the contract (i.e. these Terms and Conditions and the related legal
+                    relationship between you and the Provider) to a third party, in particular in the event of the sale
+                    of the business, transformation or other reorganisation of the Provider. The Provider will notify
+                    you of such an assignment via the Service or by email. If you do not agree with the assignment, you
+                    have the right to terminate your use of the Service and terminate the contract (by cancelling your
+                    Account). The User <strong>is not entitled</strong> to transfer or assign their rights or
+                    obligations under this contract to a third party without the prior written consent of the Provider.
+                </li>
+                <li><strong>Severability clause:</strong> If any provision of these Terms and Conditions is found to be
+                    invalid, ineffective or unenforceable (e.g. by a court decision or due to a change in legislation),
+                    this shall not affect the validity and effectiveness of the remaining provisions of the Terms and
+                    Conditions. In such a case, the contracting parties undertake to replace the invalid or ineffective
+                    provision with a new provision that corresponds as closely as possible to the original purpose and
+                    intent.</li>
+                <li><strong>Force majeure:</strong> Neither party shall be liable for any delay or failure to perform
+                    its obligations if such delay or failure was caused by events beyond the reasonable control of that
+                    party ( <strong>force majeure</strong> ). Force majeure includes, in particular, natural disasters,
+                    fires, floods, epidemics, power outages, telecommunications service outages, government
+                    intervention, wars, civil unrest, or cyber attacks. If a force majeure event occurs, the party
+                    invoking it must inform the other party without undue delay and make reasonable efforts to resume
+                    the performance of its obligations.</li>
+                <li><strong>Language and interpretation:</strong> These Terms and Conditions are written in the Czech
+                    language. If a translation into another language is made, the Czech version shall prevail in the
+                    event of a dispute over interpretation. The titles of the individual articles and sections in these
+                    Terms and Conditions are for clarity only and do not affect the interpretation of this agreement.
+                    The terms defined in Article 1 (Definition of Terms) have the meaning given therein throughout the
+                    text of the Terms and Conditions.</li>
+                <li><strong>Entire Agreement:</strong> These Terms and Conditions (including the Privacy Policy, Cookie
+                    Policy and any other terms and conditions referred to herein) constitute the entire and sole
+                    agreement between the Provider and the User regarding the use of the Service and supersede any prior
+                    agreements or statements relating to the same subject matter. No oral agreement between you and the
+                    Provider that is not contained in these Terms and Conditions is binding on the parties.</li>
+                <li><strong>Contact and delivery:</strong> To communicate with the Provider, please use the contact
+                    details provided in the introduction to these Terms and Conditions. The Provider may deliver notices
+                    to Users regarding the Service and this Agreement via: (a) internal notifications or messages in the
+                    Application, (b) email to the User's registered email address, or (c) post to the User's last known
+                    address (if available). An electronic communication shall be deemed delivered at the time of
+                    demonstrable dispatch to your email address or display within your Account.</li>
+                <li><strong>Effective date:</strong> These General Terms and Conditions of Use shall become valid an
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <footer class="doc-footer">
+        &copy; Metemi s.r.o. &nbsp;·&nbsp; These Terms and Conditions govern use of the Metemi Application.
+        &nbsp;·&nbsp;
+        <a href="https://www.metemi.com/gdpr">Privacy Policy &amp; GDPR</a>
+    </footer>
+
+</body>
+
+</html>

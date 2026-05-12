@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metemi - The Real-Life Social App</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <!-- Preconnect to external domains -->
+    <!-- <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin> -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Metemi is a social app built for real-life meetups around you. Meet groups and people the way it should happen. Get lifetime Premium for free.">
+    <meta name="keywords"
+        content="Metemi, social app, real-life meetups, meetup app, Krakow meetups, make friends, connect offline">
+    <meta name="author" content="Metemi">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://metemi.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metemi.com/">
+    <meta property="og:title" content="Metemi - The Real-Life Social App">
+    <meta property="og:description"
+        content="Metemi is a social app built for real-life meetups around you. Meet groups and people the way it should happen.">
+    <meta property="og:image" content="https://metemi.com/assets/img/png/phone-01.png">
+    <meta property="og:site_name" content="Metemi">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metemi.com/">
+    <meta property="twitter:title" content="Metemi - The Real-Life Social App">
+    <meta property="twitter:description"
+        content="Metemi is a social app built for real-life meetups around you. Meet groups and people the way it should happen.">
+    <meta property="twitter:image" content="https://metemi.com/assets/img/png/phone-01.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Metemi",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "SocialNetworkingApplication",
+      "description": "A social app built for real-life meetups around you.",
+      "url": "https://metemi.com",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Metemi"
+      }
+    }
+    </script>
+
+    <!-- styles -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dist/styles.min.css">
+
+    <!-- scripts -->
+    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script async
+        src="https://www.google.com/recaptcha/api.js?render=6Lfd_G0sAAAAAGg946QXAQI9IUmgbc7Lwy35BLl4"></script>
+    <script defer src="assets/app.js"></script>
+
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/43627b1a903af39aef1b84cab537a50b/script.js"></script>
+    <!-- End cookieyes banner -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MKZPTW6P');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <div class="full-bg">
+        <div class="absolute top-0 left-0 head-composition w-full min-h-screen overflow-hidden z-0">
+            <img src="assets/img/jpg/head-bg.jpg" alt="Metemi" class="z-0 w-full">
+        </div>
+    </div>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <div class="head-avatars w-full min-h-screen top-0 left-0 absolute z-10">
+                <img src="assets/img/png/avatar-1.png" alt="Metemi" class="avatar avatar-1" data-parallax-speed="200">
+                <img src="assets/img/png/avatar-2.png" alt="Metemi" class="avatar avatar-2" data-parallax-speed="320">
+                <img src="assets/img/png/avatar-3.png" alt="Metemi" class="avatar avatar-3" data-parallax-speed="160">
+                <img src="assets/img/png/avatar-4.png" alt="Metemi" class="avatar avatar-4" data-parallax-speed="280">
+                <img src="assets/img/png/avatar-5m.png" alt="Metemi" class="avatar avatar-5" data-parallax-speed="350">
+                <img src="assets/img/png/avatar-6m.png" alt="Metemi" class="avatar avatar-6" data-parallax-speed="240">
+                <img src="assets/img/png/avatar-7.png" alt="Metemi" class="avatar avatar-7" data-parallax-speed="200">
+            </div>
+
+            <h1 hero-logo class="main-title">Metemi</h1>
+
+            <section id="header-section">
+                <img src="assets/img/svg/krakow.svg" alt="Metemi Krakow" class="main-title-krakow">
+                <!-- <button class="burger-btn" aria-label="Open menu" aria-expanded="false">
+                    <img src="assets/img/svg/burger.svg" alt="Metemi menu">
+                </button> -->
+                <div class="left">
+                    <h2 class="title-big">
+                        Meet <span class="word-switcher-container"><span
+                                class="word-switcher-placeholder">groups</span><span
+                                class="word-switcher">people</span></span><br />
+                        the way it should<br />happen.
+                    </h2>
+                    <h3 class="subtitle">
+                        A social app built for<br>real-life meetups around you.
+                    </h3>
+                    <button class="how-btn" aria-label="Watch how it works video">
+                        How it works
+                        <img src="assets/img/svg/play-btn.svg" alt="How it works" aria-hidden="true">
+                    </button>
+
+                    <div class="premium-form-header flex-col items-start">
+                        <h4 class="premium-title text-gradient">Get free Premium</h4>
+                        <div class="premium-form-row flex items-center w-full gap-8">
+                            <span class="premium-free text-gradient whitespace-nowrap">for one month</span>
+                            <a href="#">
+                                <img
+                                    src="assets/img/jpg/google-play.jpg"
+                                    srcset="assets/img/jpg/google-play.jpg 1x, assets/img/jpg/google-play@2x.jpg 2x"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="google-play"
+                                    class="google-play"
+                                />
+                            </a>
+                        </div>
+                        <p class="premium-text text-gradient">The first 500 get early access and be one of them.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="first-section" class="md:h-screen w-full z-1" style="background-color: white">
+                <div class="premium-form-header mobile flex-col items-start">
+                    <h4 class="premium-title text-gradient">Get free Premium for one month</h4>
+                    <p class="premium-text text-gradient">The first 500 get early access and be one of them.</p>
+                    <a href="#" class="premium-button mt-4 flex w-full justify-center">
+                        <img
+                            src="assets/img/jpg/google-play.jpg"
+                            srcset="assets/img/jpg/google-play.jpg 1x, assets/img/jpg/google-play@2x.jpg 2x"
+                            loading="lazy"
+                            decoding="async"
+                            alt="google-play"
+                            class="google-play"
+                        />
+                    </a>
+                </div>
+                <div class="flex flex-col md:flex-row flex-between w-full">
+                    <div class="left order-2 md:order-1">
+                        <video src="assets/video/video-01.mp4" playsinline muted loop></video>
+                    </div>
+                    <div class="right pl-32 flex flex-col flex-grow items-end gap-8 order-1 md:order-2">
+                        <img src="assets/img/png/phone-01.png" class="self-end" alt="Metemi app preview" loading="lazy"
+                            decoding="async">
+                        <h3 class="section-title text-gradient self-start">
+                            Naturally<br>connected.
+                        </h3>
+                        <p class="section-text self-start">
+                            We spend so much time swiping through people who aren’t here, while standing next
+                            to&nbsp;people who are. <span class="text-gradient font-bold">METEMI brings meeting back to
+                                where it belongs. To real life.</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="second-section" class="md:h-screen w-full z-1" style="background-color: white">
+                <div class="flex flex-col md:flex-row flex-between w-full">
+                    <div class="left pl-40 flex flex-col flex-grow items-end gap-8">
+                        <h3 class="section-title text-gradient self-start">
+                            Right here,<br>right now.
+                        </h3>
+                        <p class="section-text self-start">
+                            No hesitation. No endless chatting. Just people who are around you, right now. <span
+                                class="text-gradient font-bold">Choose who you feel like meeting and make it
+                                happen.</span>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <video src="assets/video/video-02.mp4" playsinline muted loop preload="none"></video>
+                    </div>
+                    <img src="assets/img/svg/metemi-outlines.svg" alt="METEMI" class="metemi-text" loading="lazy"
+                        decoding="async">
+                </div>
+
+                <div class="dm-container mt-32">
+                    <div class="dm-wrapper" anim-pop-in>
+                        <div class="dm-red">
+                            <p class="description">
+                                Alright, let's meet at 7 in front of that Vietnamese place.
+                                We'll take it from there.
+                            </p>
+                            <p class="time">12:02</p>
+                        </div>
+                    </div>
+                    <div class="dm-wrapper" anim-pop-in>
+                        <div class="dm-gray">
+                            <p class="description">OK, agree, see U later.</p>
+                            <p class="time">12:05</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="third-section" class="w-full z-1" style="background-color: white">
+                <div class="flex flex-col md:flex-row flex-between w-full">
+                    <div class="left order-2 md:order-1">
+                        <video src="assets/video/video-03.mp4" playsinline muted loop preload="none"></video>
+                    </div>
+                    <div
+                        class="right order-1 md:order-2 pl-32 flex flex-col flex-grow items-start justify-center gap-8">
+                        <h3 class="section-title text-gradient self-start">
+                            Safety first.
+                        </h3>
+                        <p class="section-text self-start">
+                            Your exact location stays private. Only distance is shown. <span
+                                class="text-gradient font-bold">You’re always in control, with easy ways to hide, block,
+                                or report anyone.</span> Made to feel safe and comfortable for everyone.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fourth-section" class="min-h-screen w-full z-1" style="background-color: white">
+                <div class="flex flex-col md:flex-row flex-between items-stretch w-full">
+                    <div class="left pl-40 flex flex-col flex-grow justify-center items-end gap-8">
+                        <h3 class="section-title text-gradient self-start">
+                            Life’s better<br>offline.
+                        </h3>
+                        <p class="section-text self-start">
+                            Any moment works. <span class="text-gradient font-bold">A workout, a dog walk, dinner, a
+                                coffee, a random afternoon.</span> Whatever you’re doing, you can meet the people around
+                            you.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <video src="assets/video/how-it-changes-1.mp4" playsinline muted loop></video>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fifth-section" class="min-h-screen w-full z-1" style="background-color: white">
+                <div class="flex flex-col md:flex-row flex-between w-full">
+                    <div class="left order-2 md:order-1">
+                        <video src="assets/video/video-05.mp4" playsinline muted loop preload="none"></video>
+                    </div>
+                    <div
+                        class="right order-1 md:order-2 pl-32 flex flex-col flex-grow items-start justify-center gap-8">
+                        <h3 class="section-title text-gradient self-start">
+                            From one<br>to many.
+                        </h3>
+                        <p class="section-text self-start">
+                            <span class="text-gradient font-bold">Maybe you’re in the mood to meet just one person.
+                                Maybe you’d rather meet a small group.</span> There’s no right way. Just the way that
+                            feels right to you.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sixth-section" class="w-full">
+                <div class="flex flex-col md:flex-row justify-between w-full">
+                    <div class="left pl-40 py-64">
+                        <h3 class="section-title text-white self-start">
+                            First 500 get more.
+                        </h3>
+                        <p class="section-text self-start">
+                            <b>Get the advantage</b>. We’re starting right where people actually meet. Krakow is our first test city. <b>Join now and be one of them</b>.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <video src="assets/video/video-04.mp4" playsinline muted loop></video>
+                    </div>
+                </div>
+                <div class="premium-form-bottom flex-col items-start">
+                    <h4 class="premium-title text-gradient">Get free Premium</h4>
+                    <div class="premium-form-row flex items-center w-full gap-8">
+                        <span class="premium-free text-gradient whitespace-nowrap">for one month</span>
+                        <a href="#">
+                            <img
+                                src="assets/img/jpg/google-play.jpg"
+                                srcset="assets/img/jpg/google-play.jpg 1x, assets/img/jpg/google-play@2x.jpg 2x"
+                                loading="lazy"
+                                decoding="async"
+                                alt="google-play"
+                                class="google-play"
+                            />
+                        </a>
+                    </div>
+                    <p class="premium-text text-gradient">The first 500 get early access and be one of them.</p>
+                </div>
+                <div class="premium-form-bottom mobile flex-col items-start">
+                    <h4 class="premium-title text-gradient">Get free Premium for one month</h4>
+                    <p class="premium-text text-gradient">The first 500 get early access and be one of them.</p>
+                    <a href="#" class="premium-button mt-4 flex w-full justify-center">
+                        <img
+                            src="assets/img/jpg/google-play.jpg"
+                            srcset="assets/img/jpg/google-play.jpg 1x, assets/img/jpg/google-play@2x.jpg 2x"
+                            loading="lazy"
+                            decoding="async"
+                            alt="google-play"
+                            class="google-play"
+                        />
+                    </a>
+                </div>
+                <img src="assets/img/svg/krakow-outlines.svg" alt="METEMI Krakow" class="krakow-text" loading="lazy"
+                    decoding="async">
+            </section>
+
+            <section id="seventh-section" class="w-full" style="background-color: white">
+                <div class="left flex-col md:flex-row items-center md:items-end gap-24 pl-40">
+                    <div class="flex items-center gap-5 md:gap-12">
+                        <h3 class="section-title text-gradient self-start">
+                            See our plans and <br>choose what works <br>best for you
+                        </h3>
+                    </div>
+                    <button class="pricing-btn mt-4 pricing">
+                        Pricing
+                    </button>
+                </div>
+                <div class="right relative">
+                    <div class="talk-to-images">
+                        <img src="assets/img/png/phone.png" alt="Phone Image" class="phone" loading="lazy"
+                            anim-fade-right data-start="top 55%" />
+                        <div class="avatars-container">
+                            <div class="portret-wrapper portret-1" anim-pop-in>
+                                <div class="portret-float-wrapper">
+                                    <img src="assets/img/png/portret-1.png" alt="Portrait Image 1" class="portret"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="portret-wrapper portret-2" anim-pop-in>
+                                <div class="portret-float-wrapper">
+                                    <img src="assets/img/png/portret-2.png" alt="Portrait Image 2" class="portret"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="portret-wrapper portret-3" anim-pop-in>
+                                <div class="portret-float-wrapper">
+                                    <img src="assets/img/png/portret-3.png" alt="Portrait Image 3" class="portret"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="portret-wrapper portret-4" anim-pop-in>
+                                <div class="portret-float-wrapper">
+                                    <img src="assets/img/png/portret-4.png" alt="Portrait Image 4" class="portret"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="portret-wrapper portret-5" anim-pop-in>
+                                <div class="portret-float-wrapper">
+                                    <img src="assets/img/png/portret-5.png" alt="Portrait Image 5" class="portret"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="how-it-works" id="how-it-works">
+                <div class="container">
+                    <!-- Animated Bubble Background -->
+                    <div class="gradient-bg">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="goo" x="-50%" y="-50%" width="200%" height="200%"
+                                    color-interpolation-filters="sRGB">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                    <feColorMatrix in="blur" mode="matrix"
+                                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                                    <feBlend in="SourceGraphic" in2="goo" result="blended" />
+                                    <feGaussianBlur in="blended" stdDeviation="40" />
+                                </filter>
+                            </defs>
+                        </svg> -->
+                        <!-- <div class="gradients-container">
+                            <div class="g1"></div>
+                            <div class="g2"></div>
+                            <div class="g3"></div>
+                            <div class="g4"></div>
+                            <div class="g5"></div>
+                            <div class="interactive"></div>
+                        </div> -->
+                    </div>
+                    <h3 class="section-title text-white">How it works</h3>
+                    <div class="how-cards-pin">
+                        <div class="card-container">
+                            <!-- First card -->
+                            <div data-group-name="how-it-works-cards" class="card anim-scale-in">
+                                <h5 class="text-description-big font-bold card-title text-gradient">
+                                    1 <br />
+                                    Open Metemi and see people or groups around you.
+                                </h5>
+                                <p class="text-description-medium text-gradient">
+                                    (Distance only<br>- you won't see their exact location.)
+                                </p>
+                                <div class="how-img-wrapper" why-card-image-1>
+                                    <img class="how-img-1" src="assets/img/png/how-card-1.png" alt="phone"
+                                        loading="eager" decoding="sync" fetchpriority="high" />
+                                </div>
+                            </div>
+                            <!-- Second card -->
+                            <div data-group-name="how-it-works-cards" class="card anim-scale-in">
+                                <h5 class="text-description-big font-bold card-title text-gradient">
+                                    2 <br />
+                                    Reach out, or let them come to you.
+                                </h5>
+                                <p class="text-description-medium text-gradient">
+                                    Fast, natural, anonymous.
+                                </p>
+                                <div class="how-img-wrapper" why-card-image-2>
+                                    <img class="how-img-2" src="assets/img/png/how-card-2.png" alt="phone"
+                                        loading="eager" decoding="sync" fetchpriority="high" />
+                                </div>
+                            </div>
+                            <!-- Third card -->
+                            <div data-group-name="how-it-works-cards" class="card anim-scale-in">
+                                <h5 class="text-description-big font-bold card-title text-gradient">
+                                    3 <br />
+                                    Meet<br>in person.
+                                </h5>
+                                <p class="text-description-medium text-gradient">
+                                    In a park. At a cafe. Or just for a moment.
+                                    Every meetup earns you a reward.
+                                </p>
+                                <div class="how-img-wrapper" why-card-image-3>
+                                    <img class="how-img-3" src="assets/img/png/how-card-3.png" alt="phone"
+                                        loading="eager" decoding="sync" fetchpriority="high" />
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.how-cards-pin -->
+                    <button class="how-btn" aria-label="Watch how it works video">
+                        How it works
+                        <img src="assets/img/svg/play-btn.svg" alt="How it works" aria-hidden="true" />
+                    </button>
+                    <!-- <h2 letter-spacing-scrub class="title-giant text-white font-bold metemi-text">
+                        METEMI
+                    </h2> -->
+                </div>
+                <div class="container-mobile-bg" data-how-mobile-isolated>
+                    <div class="container-mobile" id="how-mobile-pin-container">
+                        <div class="container-mobile-inner">
+                            <h3 class="how-mobile-title">How it works</h3>
+                            <div class="how-mobile-cards">
+                                <div class="how-mobile-card" id="how-mobile-card-1">
+                                    <h5 class="how-mobile-card-title">
+                                        1 <br />
+                                        Open Metemi and see people or groups around you.
+                                    </h5>
+                                    <p class="how-mobile-card-text">
+                                        (Distance only<br>- you won't see their exact location.)
+                                    </p>
+                                    <div class="how-mobile-image-wrap" why-card-image-1>
+                                        <img class="how-mobile-image how-mobile-image-1" src="assets/img/png/how-card-1.png" alt="phone"
+                                            loading="eager" decoding="sync" fetchpriority="high" />
+                                    </div>
+                                </div>
+                                <div class="how-mobile-card" id="how-mobile-card-2">
+                                    <h5 class="how-mobile-card-title">
+                                        2 <br />
+                                        Reach out, or let them come to you.
+                                    </h5>
+                                    <p class="how-mobile-card-text">
+                                        Fast, natural, anonymous.
+                                    </p>
+                                    <div class="how-mobile-image-wrap" why-card-image-2>
+                                        <img class="how-mobile-image how-mobile-image-2" src="assets/img/png/how-card-2.png" alt="phone"
+                                            loading="eager" decoding="sync" fetchpriority="high" />
+                                    </div>
+                                </div>
+                                <div class="how-mobile-card" id="how-mobile-card-3">
+                                    <h5 class="how-mobile-card-title">
+                                        3 <br />
+                                        Meet<br>in person.
+                                    </h5>
+                                    <p class="how-mobile-card-text">
+                                        In a park. At a cafe. Or just for a moment.
+                                        Every meetup earns you a reward.
+                                    </p>
+                                    <div class="how-mobile-image-wrap" why-card-image-3>
+                                        <img class="how-mobile-image how-mobile-image-3" src="assets/img/png/how-card-3.png" alt="phone"
+                                            loading="eager" decoding="sync" fetchpriority="high" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="how-mobile-controls" aria-label="How it works steps">
+                                <button type="button" class="how-mobile-dot how-mobile-dot-active" data-how-mobile-btn
+                                    aria-label="Show step 1"></button>
+                                <button type="button" class="how-mobile-dot" data-how-mobile-btn
+                                    aria-label="Show step 2"></button>
+                                <button type="button" class="how-mobile-dot" data-how-mobile-btn
+                                    aria-label="Show step 3"></button>
+                            </div>
+                            <button class="how-mobile-video-btn" aria-label="Watch how it works video">
+                                How it works
+                                <img src="assets/img/svg/play-btn.svg" alt="How it works" aria-hidden="true" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/img/svg/metemi-outlines.svg" alt="METEMI" class="metemi-text">
+            </section>
+
+            <section id="last-section" class="w-full flex flex-col items-center gap-12 pt-40 md:pt-60 pb-20"
+                style="background-color: white">
+                <p class="text-2xl md:text-3xl font-semibold text-gradient text-center">The first 500 get early
+                    access and be
+                    one of them.</p>
+
+                <a href="#" class="premium-button mt-4 flex w-full justify-center">
+                    <img
+                        src="assets/img/jpg/google-play.jpg"
+                        srcset="assets/img/jpg/google-play.jpg 1x, assets/img/jpg/google-play@2x.jpg 2x"
+                        loading="lazy"
+                        decoding="async"
+                        alt="google-play"
+                        class="google-play"
+                    />
+                </a>
+            </section>
+
+            <footer class="bg-white w-full flex flex-col items-center text-black">
+                <div class="flex flex-col md:flex-row items-center gap-8 font-medium text-lg pb-20">
+                    <a href="gdpr.html">GDPR</a>•
+                    <a href="terms.html">Terms of Service</a>•
+                    <a href="gdpr.html#s-cookies">Cookie Policy</a>
+                </div>
+                <div class="flex items-center gap-12 font-medium text-lg pb-20">
+                    <a href="https://www.facebook.com/profile.php?id=61586791201898" aria-label="Follow Metemi on Facebook" target="_blank" rel="noopener noreferrer"><img
+                            src="assets/img/svg/facebook-ico.svg" alt="Facebook icon" loading="lazy"
+                            decoding="async"></a>
+                    <a href="https://www.instagram.com/metemiapp/?hl=cs" aria-label="Follow Metemi on Instagram" target="_blank" rel="noopener noreferrer"><img
+                            src="assets/img/svg/insta-ico.svg" alt="Instagram icon" loading="lazy" decoding="async"></a>
+                </div>
+                <img src="assets/img/png/metemi-ico.png" class="pb-20" alt="Metemi" loading="lazy" decoding="async">
+                <img src="assets/img/png/footer-bg.png" class="bg" alt="Metemi" loading="lazy" decoding="async">
+
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Pricing Modal -->
+    <div id="pricing-modal" class="pricing-modal" aria-modal="true" role="dialog" aria-hidden="true">
+        <div class="pricing-modal__overlay"></div>
+        <div class="pricing-modal__content">
+            <button class="pricing-modal__close" aria-label="Close">&times;</button>
+            <h2 class="pricing-modal__title">Get free Premium<br>for one month</h2>
+            <p class="font-bold">The first 500 get early access and be one of them.</p>
+            <a href="#">
+                <img
+                    src="assets/img/jpg/google-play.jpg"
+                    srcset="assets/img/jpg/google-play.jpg 1x, assets/img/jpg/google-play@2x.jpg 2x"
+                    loading="lazy"
+                    decoding="async"
+                    alt="google-play"
+                    class="google-play mt-6 mb-6"
+                    style="border-radius: 5px"
+                />
+            </a>
+            <p class="pricing-modal__subtitle">Try Metemi your way.  No pressure. Just options.</p>
+            <p class="mb-16">Choose the free plan to meet people around you. Or unlock more ways to connect with Premium features.</p>    
+
+            <div class="pricing-modal__cards">
+                <!-- Premium Plan -->
+                <div class="pricing-card pricing-card--premium">
+                    <span class="pricing-card__badge">What you get <strong>for free</strong></span>
+                    <span class="pricing-card__label">PREMIUM</span>
+                    <div class="pricing-card__price">49 PLN<span>/Per month</span></div>
+                    <p class="pricing-card__desc">For deeper discovery and real-time social magic.</p>
+                    <ul class="pricing-card__features">
+                        <li class="feature feature--on">All free features</li>
+                        <li class="feature feature--on">Location-based filters</li>
+                        <li class="feature feature--on">Advanced group tools</li>
+                        <li class="feature feature--on">See who viewed your profile</li>
+                        <li class="feature feature--on">Priority support</li>
+                        <li class="feature feature--on">Unlimited radar scans</li>
+                        <li class="feature feature--on">Unlimited user discovery</li>
+                        <li class="feature feature--on">Unlimited connections</li>
+                        <li class="feature feature--on">Unlimited messaging</li>
+                        <li class="feature feature--on">Unlimited profile views</li>
+                        <li class="feature feature--on">Advanced search filters</li>
+                        <li class="feature feature--on">Custom distance limits</li>
+                        <li class="feature feature--on">Priority visibility</li>
+                        <li class="feature feature--on">Unlimited winks</li>
+                        <li class="feature feature--on">Top Profile mode</li>
+                        <li class="feature feature--on">Private browsing mode</li>
+                        <li class="feature feature--on">Hide distance mode</li>
+                    </ul>
+                </div>
+                <!-- Free Plan -->
+                <div class="pricing-card pricing-card--free">
+                    <span class="pricing-card__label">FREE PLAN</span>
+                    <div class="pricing-card__price">0 PLN<span>/Forever</span></div>
+                    <p class="pricing-card__desc">For spontaneous connections, no strings attached.</p>
+                    <ul class="pricing-card__features">
+                        <li class="feature feature--on">Unlimited messages nearby</li>
+                        <li class="feature feature--on">Join &amp; create public groups</li>
+                        <li class="feature feature--on">Safety &amp; reporting tools</li>
+                        <li class="feature feature--on">No ads, no distractions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Video Modal -->
+    <div id="how-video-modal" class="video-modal" aria-modal="true" role="dialog" aria-hidden="true">
+        <div class="video-modal__overlay"></div>
+        <div class="video-modal__content">
+            <button class="video-modal__close" aria-label="Close">&times;</button>
+            <video data-modal-video class="video-modal__video" controls playsinline></video>
+        </div>
+    </div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKZPTW6P"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

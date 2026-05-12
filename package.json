@@ -1,0 +1,10 @@
+{
+  "name": "metemi-krakow-full",
+  "version": "1.0.0",
+  "scripts": {
+    "scss": "sass --watch --style=compressed assets/css/styles.scss:assets/css/dist/styles.min.css"
+  },
+  "dependencies": {
+    "sass": "^1.99.0"
+  }
+}

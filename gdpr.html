@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Privacy Policy – Metemi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #faf9f7;
+            --surface: #ffffff;
+            --ink: #1a1a1a;
+            --ink-secondary: #4a4a4a;
+            --ink-muted: #7a7a7a;
+            --accent: #1e3a5f;
+            --accent-light: #e8eef5;
+            --accent-mid: #3b6494;
+            --rule: #ddd8cf;
+            --highlight: #f0ece4;
+            --serif: 'DM Sans', Georgia, serif;
+            --sans: 'DM Sans', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            font-weight: 300;
+            line-height: 1.75;
+        }
+
+        /* Header */
+        .doc-header {
+            background: linear-gradient(82deg,
+                    #20304f -14%,
+                    #e2373e 28%,
+                    #f4861e 93%);
+            color: white;
+            padding: 3.5rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .doc-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 60% 30%, rgba(255, 255, 255, 0.07) 0%, transparent 70%);
+        }
+
+        .doc-header .badge {
+            display: inline-block;
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.3em 0.9em;
+            border-radius: 2rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .doc-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.25;
+            color: white;
+            max-width: 700px;
+            margin: 0 auto 1rem;
+            border: none;
+            padding: 0;
+            background: none;
+            letter-spacing: 0.05rem;
+        }
+
+        .doc-header .meta {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.04em;
+        }
+
+        .doc-header .meta a {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Layout */
+        .doc-layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 0;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .doc-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                display: none;
+            }
+        }
+
+        /* TOC */
+        .toc {
+            position: sticky;
+            top: 2rem;
+            padding-right: 2rem;
+            border-right: 1px solid var(--rule);
+            font-size: 0.78rem;
+        }
+
+        .toc-label {
+            font-family: var(--sans);
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .toc ol {
+            list-style: none;
+        }
+
+        .toc ol li {
+            margin-bottom: 0.1rem;
+        }
+
+        .toc ol li a {
+            display: block;
+            color: var(--ink-secondary);
+            text-decoration: none;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            transition: background 0.15s, color 0.15s;
+            line-height: 1.4;
+        }
+
+        .toc ol li a:hover {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        /* Main Content */
+        .doc-content {
+            padding-left: 2.5rem;
+            max-width: 720px;
+        }
+
+        @media (max-width: 768px) {
+            .doc-content {
+                padding-left: 0;
+            }
+        }
+
+        .doc-content h2 {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 2.8rem;
+            margin-bottom: 0.75rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid var(--rule);
+            line-height: 1.3;
+        }
+
+        .doc-content h2:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .doc-content p {
+            font-size: 0.93rem;
+            color: var(--ink-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .doc-content a {
+            color: var(--accent-mid);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .doc-content a:hover {
+            color: var(--accent);
+        }
+
+        .doc-content ul {
+            margin: 0.8rem 0 1.2rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .doc-content ul li {
+            position: relative;
+            padding: 0.65rem 0.9rem 0.65rem 1.5rem;
+            font-size: 0.9rem;
+            color: var(--ink-secondary);
+            line-height: 1.7;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .doc-content ul li:first-child {
+            border-top: 1px solid var(--rule);
+        }
+
+        .doc-content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0.4rem;
+            top: 1.1rem;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent-mid);
+            opacity: 0.5;
+        }
+
+        .doc-content strong {
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        /* Table */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1rem 0 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--rule);
+        }
+
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .table-wrap th {
+            background: var(--accent);
+            color: white;
+            font-family: var(--sans);
+            font-weight: 500;
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.7rem 1rem;
+            text-align: left;
+        }
+
+        .table-wrap td {
+            padding: 0.65rem 1rem;
+            color: var(--ink-secondary);
+            border-bottom: 1px solid var(--rule);
+            line-height: 1.5;
+            vertical-align: top;
+        }
+
+        .table-wrap tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table-wrap tr:nth-child(even) td {
+            background: var(--highlight);
+        }
+
+        /* Footer */
+        .doc-footer {
+            text-align: center;
+            padding: 2.5rem 1rem 3rem;
+            font-size: 0.78rem;
+            color: var(--ink-muted);
+            border-top: 1px solid var(--rule);
+            margin-top: 3rem;
+        }
+
+        .doc-footer a {
+            color: var(--accent-mid);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="doc-header">
+        <span class="badge">PRIVACY POLICY</span>
+        <h1>Principles of Personal Data Processing and Protection</h1>
+        <p class="meta">Metemi&nbsp;s.r.o. &nbsp;·&nbsp; Kaprova&nbsp;42/14, Prague&nbsp;1, Czech&nbsp;Republic</p>
+    </header>
+
+    <div class="doc-layout">
+        <nav class="toc">
+            <span class="toc-label">Contents</span>
+            <ol>
+                <li><a href="#s-controller">Controller Details</a></li>
+                <li><a href="#s-rights">Exercising Rights</a></li>
+                <li><a href="#s-statement">Administrator's Statement</a></li>
+                <li><a href="#s-data">What Data is Processed</a></li>
+                <li><a href="#s-source">Where Data Comes From</a></li>
+                <li><a href="#s-minors">Minors</a></li>
+                <li><a href="#s-cookies">Cookies</a></li>
+                <li><a href="#s-google">Google Sign-In</a></li>
+                <li><a href="#s-recipients">Data Recipients</a></li>
+                <li><a href="#s-transfer">Data Transfers</a></li>
+                <li><a href="#s-retention">Data Retention</a></li>
+                <li><a href="#s-userrights">Your Rights</a></li>
+                <li><a href="#s-security">Security</a></li>
+                <li><a href="#s-changes">Policy Changes</a></li>
+            </ol>
+        </nav>
+
+        <main class="doc-content">
+            <h2 id="s-controller">Controller details</h2>
+            <p>The controller of your personal data is <strong>Metemi s.r.o., ID No.: 220 78 991, with its registered
+                    office at Kaprova 42/14, Staré Město, 110 00 Prague 1</strong> , registered in the Commercial
+                Register maintained by the Municipal Court in Prague under file number C 410628 (hereinafter referred to
+                as the "Controller"), which is the operator of the Metemi mobile application and any related websites or
+                platforms (hereinafter referred to as the "Application"). The Administrator operates an online social
+                service that allows users (hereinafter referred to as "Users") to create profiles, communicate and
+                establish contacts with other users. In this Application, the Administrator therefore processes and
+                controls the processing of your personal data as data subjects.</p>
+            <p>The Controller processes your personal data and therefore decides how your personal data will be
+                processed, for what purpose and for how long. It may also select other personal data processors who will
+                assist in the processing of personal data and who are listed in this Personal Data Processing Policy.
+            </p>
+            <p>As part of the provision of services, your data is also processed by the Application User. This
+                processing is not covered by this Personal Data Processing Policy.</p>
+            <h2 id="s-rights">Exercising individual rights, contact details of the Controller</h2>
+            <p>The Controller can be contacted in all matters relating to the processing of personal data <strong>at the
+                    email address</strong> <a href="mailto:support@metemi.com">support@metemi.com</a> <strong>or by
+                    post</strong> at the address: Metemi s.r.o.,
+                ID No.: 220 78 991, with its registered office at Kaprova 42/14, Staré Město, 110 00 Prague 1 Requests
+                are processed without undue delay, but within a maximum of one month. In exceptional cases, particularly
+                due to the complexity of the request, this period may be extended by a further two months. The
+                Controller will inform data subjects in good time of any such extension and the reasons for it.</p>
+            <h2 id="s-statement">Administrator's statement</h2>
+            <p>The Controller declares that, as the controller of the personal data of users of the Application, it
+                complies with all legal obligations required by applicable legislation, in particular Act No. 110/2019
+                Coll., on the processing of personal data, as amended, and Regulation (EU) No. 2016/679 of the European
+                Parliament and of the Council (GDPR) on the protection of natural persons with regard to the processing
+                of personal data and on the free movement of such data, and repealing Directive 95/46/EC (hereinafter
+                referred to as the "GDPR"), and therefore that:</p>
+            <ul>
+                <li>it will process Users' personal data only on the basis of a valid legal reason, in particular a
+                    legitimate interest, performance of a contract, legal obligation or consent given,</li>
+                <li>it fulfils its information obligation under Article 13 of the GDPR before commencing the processing
+                    of personal data,</li>
+                <li>it will enable Users and support them in exercising and fulfilling their rights under the Personal
+                    Data Processing Act and the GDPR.</li>
+            </ul>
+            <h2 id="s-data">What personal data is processed and for what purpose?</h2>
+            <p>In connection with the provision of the Application's services, the Controller processes the following
+                personal data:</p>
+            <h2>Identification data:</h2>
+            <p>The Controller primarily processes the first and last names of data subjects, gender, and date of birth,
+                primarily for the purposes of accessing the Application or creating an account.</p>
+            <h2>Contact details:</h2>
+            <p>The Controller primarily processes the telephone number and email address of Users in order to properly
+                provide services in the Application.</p>
+            <h2>Image data:</h2>
+            <p>The controller processes data about your image, which you upload to the Application yourself. Your image
+                may also be uploaded to your profile in the Application when using the single sign-on service provided
+                by Meta or Google Inc., if you give your voluntary consent in advance.</p>
+            <h2>Identity verification data:</h2>
+            <p>If you decide to use the optional identity verification features in the Application or if you are asked
+                to do so by the Controller (for example, to verify your age or the authenticity of your profile), we may
+                process additional data for this purpose. This includes, in particular, your current photo or video
+                (selfie) taken for verification purposes and, if necessary, data from your personal identification
+                document (e.g. ID card or passport), if such verification is required. This data will be used
+                exclusively to verify your identity or age and will not be used for any other purpose. We only store
+                identity verification data for the time necessary to perform the verification, after which it is
+                securely deleted. If we process biometric data as part of the verification process (e.g. a biometric
+                image of your face obtained from your photograph for the purpose of automated comparison with your ID),
+                such data will only be processed on the basis of your explicit consent in accordance with Article
+                9(2)(a) of the GDPR, which we will request from you in advance in the Application interface.</p>
+            <h2>Data for payment processing and accounting:</h2>
+            <p>In particular, transaction data, what was purchased, transaction date, price. The rest of the personal
+                data necessary to complete the transaction is then processed by an external platform such as Google Pay
+                as a separate personal data controller.</p>
+            <h2>Data on ongoing communication:</h2>
+            <p>This data includes both the content of messages sent between Users, between data subjects and the
+                Application, and metadata about the sending and delivery of these messages.</p>
+            <h2>Preference data:</h2>
+            <p>This data includes data about your personal and relationship preferences, as well as data about your
+                sexual orientation and sex life in accordance with Article 9 of the GDPR . Specifically, the controller
+                processes data about your sexual orientation, sexual, relationship, dating, leisure, political, ethnic,
+                health and religious preferences.</p>
+            <h2>Geolocation data:</h2>
+            <p>To make it easier to find other Users in your area, we process User location data using GPS or Bluetooth
+                (depending on User approval) or other
+                geolocation within the Scanner feature. This data helps us show Users who are close to other Users. This
+                feature allows you to search for other Users in your vicinity, but it also allows other Users to find
+                you. When using this tool, the Application displays the approximate distance between Users, not their
+                exact location. Location data is obtained and processed directly from your mobile device to ensure the
+                functionality of the Scanner.</p>
+            <p>Within the Application, it is also possible to share your exact current location with selected
+                Application Users. Your location will then be displayed directly on the map to the specified User.
+                Sharing your exact location carries security risks, which are further specified in the third part of the
+                General Terms and Conditions.</p>
+            <p>The collection of this data is always subject to your approval and can be terminated immediately by the
+                User by turning off access to location services, bluetooth technology in the device settings or by
+                revoking approval directly
+                in the Application. User location data is stored only for the time necessary (maximum 72 hours) to
+                ensure the functionality of searching for other Users and is then automatically deleted.</p>
+            <h2>Application usage data:</h2>
+            <p>The controller processes, in particular, the type of browser used, its operating system and IP address,
+                data on orders or behaviour in the Application. By using the Application, certain data is automatically
+                sent from the data subject's device. From the logs, where information about the data subject's activity
+                in the Application is also recorded for security reasons, it is possible to deduce the length of a
+                single login, the actions performed by the data subject on the website, and information about the data
+                entered into forms. The Controller performs the above in order to continuously improve its services and
+                adapt them to current technical possibilities.</p>
+            <h2>Data from cookies and other tracking technologies:</h2>
+            <p>If cookies are enabled in your browser, the Controller uses them to obtain information about the websites
+                you visit and your user preferences on your mobile phone. This also includes data from similar tracking
+                technologies.</p>
+            <p><strong>The Controller processes personal data for the following legal reasons</strong> :</p>
+            <ul>
+                <li><strong>Provision and operation of the Application:</strong></li>
+            </ul>
+            <p>In order for you to create an account in the Application and fully use the Application as a User, we will
+                process all of the above categories of personal data. This processing also includes sharing your
+                personal data with other users, according to your choices made in the Application. The legal basis for
+                this processing is the performance of the contract you enter into with us in the manner described in the
+                General Terms and Conditions, with the exception of the processing of any sensitive data under Article 9
+                of the GDPR, which requires your consent. For this purpose, we process your data in particular for the
+                duration of your use or provision of services with us in the Application. This purpose includes, in
+                particular, account creation and management, match-making, sending and receiving messages, user
+                verification including biometrics, payment management, and internal development and improvement of the
+                Application's functionalities.</p>
+            <ul>
+                <li><strong>Questions on the website</strong></li>
+            </ul>
+            <p>The controller will process Users' personal data (e-mail, first and last name, address and any other data
+                provided by the User) for the purpose of responding to user enquiries and reporting content. The legal
+                basis for this processing is the performance of the contract you enter into with us in the manner
+                described in the General Terms and Conditions. For this purpose, we process your data in particular for
+                the duration of your use or provision of services with us in the Application.</p>
+            <ul>
+                <li><strong>Protection of the Controller's legal interests and keeping internal records:</strong></li>
+            </ul>
+            <p>The Controller also processes the personal data of the data subjects mentioned above to protect its
+                rights and keep internal records of data subjects, for the possible need to enforce rights or for
+                effective defence in a possible dispute. For this purpose, the Controller may process all categories of
+                data mentioned above. The legal basis for processing is the Controller's legitimate interest in
+                protecting its rights, legal claims and keeping records of the performance provided, with the exception
+                of the processing of your sensitive data pursuant to Article 9 of the GDPR, which is the establishment,
+                exercise or defence of our legal claims. Personal data is generally stored for the duration of the
+                statutory limitation period, but usually no longer than sixteen (16) years after the provision of the
+                service or the termination of the contract, including the deletion of the user account.</p>
+            <ul>
+                <li><strong>Brand promotion and marketing communication, push notifications:</strong></li>
+            </ul>
+            <p>The Controller uses your personal data, with the exception of sensitive data pursuant to Article 9 of the
+                GDPR, for the purpose of promoting its brand, including information about offers and news about the
+                services provided within the Application, but in such a way as to avoid unnecessary harassment. The
+                legal basis for processing is the Controller's legitimate interest in promoting its brand, Application
+                and services. At the same time, in some cases, you may give your consent to the processing of personal
+                data. If the Controller processes your personal data on the basis of a legitimate interest, it does so
+                for the duration of the account, which you can delete at any time. You have the right to object to such
+                processing. If the Controller processes your personal data on the basis of your consent, it does so
+                until you withdraw your consent.</p>
+            <p>As part of our marketing communications and service information, we may also use push notifications in
+                the Application. If you have push notifications enabled on your device, we may use them to send you
+                information about new features, special offers or promotions, or other notifications related to your use
+                of the Application. We set these notifications so that they do not bother you excessively and are
+                relevant to you. If you no longer wish to receive marketing communications in the form of push
+                notifications, you can turn them off or adjust them at any time in the settings of your mobile device or
+                directly in the App settings. We consider the sending of commercial communications via push
+                notifications to be our legitimate interest (promotion of our services to existing users), and if you do
+                not agree with this, you have the right to object – in which case we will no longer send you push
+                notifications with commercial content. If push notifications contain only necessary operational
+                notifications (e.g. notifications of new messages from other Users or security alerts), sending them is
+                necessary for the proper provision of the service; however, you can still disable them on your device,
+                but be aware that you may miss important real-time notifications.</p>
+            <h2 id="s-source">Where does the Controller obtain personal data?</h2>
+            <p>The Controller processes personal data that it receives from its data subjects when they access the
+                Application or their account, or by monitoring the behaviour of visitors and users in the Application or
+                on the website. The Controller obtains other personal data within the Application, in particular derived
+                data from data provided between data subjects. The Controller may also obtain other personal data from
+                other users of the Services and from its partners. Such partners are controllers of your personal data,
+                which they transfer to the Controller according to their own instructions and for their own purposes,
+                and where the Controller is only a processor of your personal data, i.e. it processes personal data
+                according to the instructions of its partners. However, there may also be partners with whom the
+                Controller will be in joint control, which means that the Controller who will decide on the processing
+                of your personal data in a given case will be responsible for the processing of your personal data.</p>
+            <h2 id="s-minors">No processing of minors' personal data</h2>
+            <p>Our Platform is not intended for persons under the age of 18. If we discover that we have accidentally
+                obtained personal data from a child without the consent of a legal guardian, we will delete such data
+                immediately. If you are a parent or legal guardian and believe that your child has provided us with
+                personal data without your consent, please contact us at the above contacts.</p>
+            <h2 id="s-cookies">Cookies</h2>
+            <p>When using the website or Application, cookies or other technologies are stored on your device (phone).
+            </p>
+            <p>Some cookies are stored directly on the basis of technical operations of the website and Application and
+                are necessary for their functioning. The Administrator warns that if the User chooses to block these -
+                <strong>Necessary cookies,</strong> then the website or Application may not function properly and may
+                exhibit technical errors. Necessary cookies are obtained mainly when navigating between different parts
+                of the website and the Application and during repeat visits, when displaying the content of the website
+                and the Application, when ensuring security or recording errors on the website or in the Application.
+            </p>
+            <p>The controller uses the following <strong>necessary cookies:</strong></p>
+            <div class="table-wrap">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Purpose</th>
+                        <th>Legal basis (GDPR)</th>
+                    </tr>
+                    <tr>
+                        <td>Authentication and session tokens</td>
+                        <td>Maintaining user login and ensuring secure sessions with servers.</td>
+                        <td>Necessary for the performance of a contract / Legitimate interest</td>
+                    </tr>
+                    <tr>
+                        <td>User preferences</td>
+                        <td>Remembering user settings and personalisation preferences.</td>
+                        <td>Legitimate interest / Necessary for the provision of the service</td>
+                    </tr>
+                    <tr>
+                        <td>Application instance identifier</td>
+                        <td>Identification of a single application installation to ensure the necessary services.</td>
+                        <td>Legitimate interest / Necessary for the functioning of the service</td>
+                    </tr>
+                    <tr>
+                        <td>Security tokens / nonces</td>
+                        <td>Protection against misuse and ensuring secure API requests.</td>
+                        <td>Legitimate interest (system security)</td>
+                    </tr>
+                    <tr>
+                        <td>Cache and temporary files</td>
+                        <td>Improving performance and reducing data load by storing temporary data.</td>
+                        <td>Legitimate interest (ensuring functionality and efficiency)</td>
+                    </tr>
+                    <tr>
+                        <td>Error and crash logs</td>
+                        <td>Collection of technical information about errors to improve stability.</td>
+                        <td>Legitimate interest (ensuring stability and security)</td>
+                    </tr>
+                </table>
+            </div>
+            <p>In addition to essential cookies, the Application may also use cookies and technologies <strong>for
+                    analytical and statistical purposes</strong> . These allow us to monitor the use of the Application
+                and improve our services (for example, to measure traffic, the functionality of individual features, and
+                to understand how Users interact with the Application). Specifically, we may use third-party tools, such
+                as Google Analytics from Google, which collect data about your device and use of the Application (e.g.,
+                device identifiers, anonymised IP address, information about the use of Application features, etc.).
+                These analytical tools process data for our legitimate interests in improving and optimising the
+                Application. Where required by law, we will request your consent to use analytical cookies and similar
+                technologies. Users have the option to refuse the storage of these cookies or to subsequently withdraw
+                their consent (e.g. through device or Application settings) without affecting the basic functionality of
+                the Application.</p>
+            <h2 id="s-google">Google user data and OAuth information</h2>
+            <p>In order to provide seamless login and registration, the Administrator allows users to log in using their
+                Google account. This process is secured by Google's OAuth authentication system, which ensures that your
+                login details are never shared with the Administrator's service.</p>
+            <h2 id="s-google">Data we collect through Google Sign-In</h2>
+            <p>If you choose to register or sign in using Google Sign-In, we only request access to the following
+                information from your Google account:</p>
+            <ul>
+                <li>the name from your Google account,</li>
+                <li>the email address associated with your Google account,</li>
+                <li>your Google account profile photo (optional, depending on the permissions granted).</li>
+            </ul>
+            <p>We do not access any other information, such as your contacts, files, calendar or emails.</p>
+            <h2>Purpose of collecting personal data</h2>
+            <p>We use the above information exclusively for the following purposes:</p>
+            <ul>
+                <li>to verify your identity and enable secure login or registration,</li>
+                <li>to create and manage your user account,</li>
+                <li>to personalise your profile (e.g. display your name or profile photo),</li>
+                <li>to communicate with you about your account or important service updates.</li>
+            </ul>
+            <p>We do not use Google user data for advertising, analytical or marketing purposes.</p>
+            <h2>Storage and protection of Google user data</h2>
+            <p>All data obtained through Google login is securely stored using encryption and strict access controls. We
+                do not store your Google account password or other sensitive authentication information. Access tokens
+                provided by Google are used only to verify sessions and are never shared with third parties.</p>
+            <p>We only store data for as long as necessary to maintain your account or as required by law. After you
+                delete your account, all associated Google user data is permanently deleted within a reasonable period
+                of time.</p>
+            <h2>Sharing and disclosure of data</h2>
+            <p>The controller does not sell, rent or otherwise share Google user data with third parties. Data may only
+                be disclosed if:</p>
+            <ul>
+                <li>required by law or valid legal process, or</li>
+                <li>it is necessary to protect the rights or safety of the Administrator or its users.</li>
+            </ul>
+            <p>All handling of Google user data is in accordance with Google's Limited Use Requirements, which means
+                that this data is only used to provide or improve user-oriented features within the Application.</p>
+            <h2>Revoking access</h2>
+            <p>You can revoke the Administrator's access to your Google account at any time on your Google account
+                permissions page. After revoking access, you may need to reconnect your Google account to log in again.
+            </p>
+            <h2>Compliance with Google API Policies</h2>
+            <p>The use and transfer of information obtained from the Google API interface to any other application by
+                the Administrator is in accordance with Google's API policies (Google API Services User Data Policy),
+                including Limited Use requirements.</p>
+            <h2>Security and protection of personal data</h2>
+            <p>The Administrator protects personal data to the maximum extent possible using modern technologies that
+                correspond to the level of technical development. The Administrator has adopted and maintains all
+                possible (currently known) technical and organisational measures to prevent the misuse, damage or
+                destruction of users' personal data.</p>
+            <p>The protection of your data is a priority. For this reason, the Controller has adopted, maintains and
+                continuously improves technical and organisational measures to protect against the leakage, loss,
+                deletion or misuse of personal data. These measures include, in particular:</p>
+            <ul>
+                <li>encryption of data during transmission, both in communications between the Controller's servers and
+                    your device, and in communications during technical transfers within the functioning of the
+                    services;</li>
+                <li>ensuring the ongoing confidentiality, integrity, availability and resilience of systems and services
+                    processing personal data;</li>
+                <li>ensuring the ability to restore the availability of and access to personal data in the event of any
+                    incidents;</li>
+                <li>regular testing, assessment and evaluation of the effectiveness of the measures implemented to
+                    ensure the security of processing;</li>
+                <li>controlling and recording access to personal data and any processing thereof;</li>
+                <li>regularly backing up personal data to independent locations;</li>
+                <li>using antivirus and anti-malware systems, including firewalls and intrusion detection systems
+                    (IDS/IPS);</li>
+                <li>monitoring and logging access to systems containing personal data for the purpose of preventing and
+                    detecting unauthorised access;</li>
+                <li>use of secure hosting and cloud services that meet personal data protection standards (e.g. ISO/IEC
+                    27001, GDPR compliance).</li>
+            </ul>
+            <h2>Automated decision-making and profiling</h2>
+            <p>The controller does not make any decisions concerning Users that are based solely on automated processing
+                of personal data (without human intervention) and that would have legal effects on Users or similarly
+                significantly affect them within the meaning of Article 22 of the GDPR. In other words, we do not engage
+                in automated individual decision-making that would in itself determine your rights or obligations or
+                otherwise seriously affect you.</p>
+            <p>The Application does use algorithmic data processing (e.g. your preferences, location and other
+                information) for the purpose of connecting you with other Users and personalising your environment in
+                the Application – this can be considered a form of profiling within the meaning of the GDPR. However,
+                this profiling is not used for automated decision-making that would prevent you from using the service
+                or penalise you in any way. It is primarily about evaluating the data you provide and your behaviour in
+                the Application so that you are offered relevant suggestions and content that matches your interests
+                (e.g. displaying profiles of other Users who meet your specified preference filters). However, the final
+                decision on who you communicate or meet with is entirely up to you as a User – our system only
+                preselects options based on the data you have entered, but does not make binding decisions for you.</p>
+            <p>We do not perform profiling for direct marketing purposes (e.g. tailoring offers or advertisements to
+                your interests) without your consent. If we ever perform such marketing profiling based on a legitimate
+                interest, you have the right to object at any time, and we will then terminate such processing. Your
+                rights in relation to profiling and automated decision-making are further described in the User Rights
+                section of this Policy (in particular, the right to object under Article 21 of the GDPR and the right
+                not to be subject to a decision based solely on automated processing under Article 22 of the GDPR).</p>
+            <h2 id="s-transfer">Transfer of personal data to third parties</h2>
+            <p>Users' personal data is accessible to the Controller's employees and associates, who are bound by
+                confidentiality and trained in the security of personal data processing.</p>
+            <p>In order to ensure certain specific processing operations that the Controller cannot perform on its own,
+                it uses the services and applications of processors who specialise in such processing and proceed in
+                accordance with the GDPR.</p>
+            <p>Furthermore, with your consent, the Controller makes your personal data available to other users of the
+                Application.</p>
+            <p>The Controller may also transfer your personal data, with your consent, to other entities that are also
+                controllers .</p>
+            <p>The controller uses the following personal data processors for the processing of personal data:</p>
+            <ul>
+                <li>External accounting office for accounting purposes</li>
+                <li>IT support to ensure the smooth running of information systems</li>
+                <li>Meta for the purpose of logging into the Application</li>
+                <li>Google Inc. for the purposes of logging into the Application and performing take-down procedures
+                </li>
+            </ul>
+            <p>The controller reserves the right to decide in the future to use other applications or processors to
+                facilitate and improve processing, while placing at least the same demands on security and quality of
+                processing when selecting a processor.</p>
+            <h2>Transfer of data outside the European Union</h2>
+            <p>Data is processed mainly in the European Union or in countries that ensure an adequate level of
+                protection based on a decision by the European Commission.</p>
+            <p>Equivalent protection of personal data is ensured. The Controller continuously re-evaluates this fact
+                and, if equivalent protection ceases to be ensured, will take measures in accordance with the GDPR to
+                ensure that personal data continues to be properly protected.</p>
+            <p>Any transfer of data outside the EU will only take place if the relevant processor or controller
+                undertakes to comply with the standard contractual clauses issued by the European Commission, available
+                at
+                https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc/standard-contractual-clauses-international-transfers_en
+                .</p>
+            <h2>Users' rights in relation to personal data protection</h2>
+            <p>The Controller respects a number of rights in relation to personal data protection. Data subjects may
+                exercise their rights by contacting the Controller using the contact details provided above.</p>
+            <ul>
+                <li><strong>The right to information</strong> , which is already fulfilled by this information page with
+                    the principles of personal data processing.</li>
+                <li><strong>Right of access</strong> . Data subjects may at any time request the Controller to provide
+                    information about what personal data is being processed about them and to obtain access to this
+                    personal data, including a copy thereof, which will be made available to users free of charge,
+                    although a fee will be charged for access to this data on the basis of repeated or vexatious
+                    requests.</li>
+                <li>Users may exercise <strong>their right to restrict processing</strong> if they believe that the
+                    Controller is processing inaccurate data, if they believe that the Controller is processing data
+                    without sufficient legal basis, but the user is not interested in having all data deleted, or if
+                    <strong>an objection to processing</strong> has been raised. The user may restrict the scope of
+                    personal data or the purposes of processing (e.g. by unsubscribing from the newsletter, they
+                    restrict the purpose of processing for sending commercial communications).
+                </li>
+                <li><strong>Right to portability</strong> . The user has the right to obtain personal data that they
+                    have provided to the Controller and that is processed by automated means on the basis of a contract
+                    or consent. The Controller shall provide such data to the user in a structured, commonly used format
+                    within 30 days of receiving a request for the transfer of personal data from the data subject.</li>
+                <li><strong>Right to rectification.</strong> If the user finds that the personal data processed by the
+                    Controller is inaccurate or incomplete, they have the right to have the Controller rectify or
+                    complete it without undue delay.</li>
+                <li><strong>Right to erasure (to be forgotten)</strong> . Users have the right to erasure (to be
+                    forgotten), whereby the Controller notes that this right does not apply if the processing of
+                    personal data is still necessary for the fulfilment of other legal obligations. The user has the
+                    right to erasure of personal data if (i) they withdraw their consent to the processing of personal
+                    data, where consent is necessary for the processing and there is no other legal basis for the
+                    processing of personal data, (ii) they object to the processing of personal data that the Controller
+                    processes on the basis of its legitimate interest and either the Controller does not demonstrate
+                    that there are compelling legitimate grounds for the processing which override the interests, rights
+                    and freedoms of the User, or the objection relates to direct marketing, (iii) the processing of
+                    personal data is no longer in accordance with generally binding regulations.</li>
+                <li><strong>Right to withdraw consent</strong></li>
+            </ul>
+            <p>If you give the Controller consent to process your personal data, this consent is entirely voluntary and
+                you may withdraw it at any time by sending an email to <a
+                    href="mailto:support@metemi.com">support@metemi.com</a>. The Controller notes that
+                withdrawal of consent does not affect the lawfulness of processing prior to such withdrawal or the
+                possibility of continuing to process personal data on the basis of other legal grounds.</p>
+            <ul>
+                <li><strong>Right to object to processing</strong></li>
+            </ul>
+            <p>Users always have the right to object to the processing of personal data that takes place on the basis of
+                the Controller's legitimate interest. The Controller will always comply with such an objection if it
+                processes personal data for marketing purposes; in other cases, the Controller will cease to process
+                personal data unless it has serious legitimate reasons to continue processing personal data.</p>
+            <ul>
+                <li><strong>The right to lodge a complaint with the Office for Personal Data Protection.</strong> Users
+                    have the right to lodge a complaint against the processing of personal data by the Controller with
+                    the relevant data protection authority within the EU at any time – a list of relevant authorities
+                    can be found at this link: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en .</li>
+            </ul>
+            <h2>Effectiveness of the policy:</h2>
+            <p>This personal data processing and protection policy is effective as of 17 February 2026.</p>
+        </main>
+    </div>
+
+    <footer class="doc-footer">
+        &copy; Metemi s.r.o. &nbsp;·&nbsp; Privacy Policy governing the Metemi Application &nbsp;·&nbsp;
+        <a href="https://www.metemi.com/gdpr">Full GDPR Documentation</a>
+    </footer>
+
+</body>
+
+</html>
