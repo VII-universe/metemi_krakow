@@ -578,75 +578,79 @@ function initFadeRightAnimations() {
 function initHowItWorksMobileScroll() {
     if (window.innerWidth > 767) return;
 
-    const container = document.getElementById('how-mobile-pin-container');
-    if (!container) return;
+    const section = document.getElementById('how-mobile-pin-container');
+    if (!section) return;
 
+    const inner = section.querySelector('.container-mobile-inner');
     const cards = [
-        container.querySelector('#how-mobile-card-1'),
-        container.querySelector('#how-mobile-card-2'),
-        container.querySelector('#how-mobile-card-3'),
+        section.querySelector('#how-mobile-card-1'),
+        section.querySelector('#how-mobile-card-2'),
+        section.querySelector('#how-mobile-card-3'),
     ].filter(Boolean);
-    const buttons = [...container.querySelectorAll('[data-how-mobile-btn]')];
-    const cardsWrapper = container.querySelector('.how-mobile-cards');
+    const buttons = [...section.querySelectorAll('[data-how-mobile-btn]')];
 
-    if (!cards.length || !cardsWrapper) return;
+    if (!inner || !cards.length) return;
 
+    const N = cards.length;
     const OFFSET = 250;
-    let current = 0;
-    let animating = false;
 
-    // Set initial positions – card 0 centred, others off to the right
-    cards.forEach((card, idx) => {
-        gsap.set(card, { xPercent: idx * OFFSET - 50 });
-    });
+    // Set initial positions – card 0 centred, rest off to the right
+    cards.forEach((card, i) => gsap.set(card, { xPercent: i * OFFSET - 50 }));
+    buttons[0]?.classList.add('how-mobile-dot-active');
 
-    function goTo(idx) {
-        if (idx === current && !animating) return;
-        current = Math.max(0, Math.min(idx, cards.length - 1));
-        animating = true;
-
-        buttons.forEach((btn, i) => btn.classList.toggle('how-mobile-dot-active', i === current));
-
-        const tl = gsap.timeline({ onComplete: () => { animating = false; } });
+    // Sync card positions and dots from a 0-1 progress value
+    function syncCards(progress) {
+        const fractional = progress * (N - 1);
         cards.forEach((card, i) => {
-            tl.to(card, {
-                xPercent: (i - current) * OFFSET - 50,
-                duration: 0.42,
-                ease: 'power2.inOut',
-            }, 0);
+            gsap.set(card, { xPercent: (i - fractional) * OFFSET - 50 });
         });
+        const activeIdx = Math.round(fractional);
+        buttons.forEach((btn, i) => btn.classList.toggle('how-mobile-dot-active', i === activeIdx));
     }
 
-    // Dot buttons
-    buttons.forEach((btn, idx) => btn.addEventListener('click', () => goTo(idx)));
+    // pinType:'transform' uses translateY instead of position:fixed –
+    // prevents the jump caused by position changes and is safe with
+    // overflow:hidden ancestors (#smooth-content).
+    ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        end: 'bottom bottom',
+        pin: inner,
+        pinType: 'transform',
+        scrub: true,
+        invalidateOnRefresh: true,
+        onUpdate: (self) => syncCards(self.progress),
+    });
 
-    // Touch swipe (horizontal only, doesn't block vertical scroll)
-    let touchStartX = 0;
-    let touchStartY = 0;
-    let touchLocked = false;
+    // Helper: scroll to the Y that corresponds to card idx
+    function scrollToCard(idx) {
+        const rect = section.getBoundingClientRect();
+        const targetY = window.scrollY + rect.top + (idx / (N - 1)) * (section.offsetHeight - window.innerHeight);
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+    }
 
-    cardsWrapper.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-        touchLocked = false;
-    }, { passive: true });
+    buttons.forEach((btn, idx) => btn.addEventListener('click', () => scrollToCard(idx)));
 
-    cardsWrapper.addEventListener('touchmove', (e) => {
-        if (touchLocked) return;
-        const dx = Math.abs(e.touches[0].clientX - touchStartX);
-        const dy = Math.abs(e.touches[0].clientY - touchStartY);
-        // Lock direction on first significant move
-        if (dx > 8 || dy > 8) touchLocked = true;
-    }, { passive: true });
-
-    cardsWrapper.addEventListener('touchend', (e) => {
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        const dy = e.changedTouches[0].clientY - touchStartY;
-        // Only react to clearly horizontal swipes
-        if (Math.abs(dx) > Math.abs(dy) * 1.5 && Math.abs(dx) > 44) {
-            goTo(current + (dx < 0 ? 1 : -1));
-        }
-    }, { passive: true });
+    // Horizontal swipe → jump to adjacent card
+    const wrap = section.querySelector('.how-mobile-cards');
+    if (wrap) {
+        let sx = 0, sy = 0;
+        wrap.addEventListener('touchstart', e => {
+            sx = e.touches[0].clientX;
+            sy = e.touches[0].clientY;
+        }, { passive: true });
+        wrap.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - sx;
+            const dy = e.changedTouches[0].clientY - sy;
+            if (Math.abs(dx) > Math.abs(dy) * 1.5 && Math.abs(dx) > 44) {
+                const rect = section.getBoundingClientRect();
+                const cur = Math.round(
+                    Math.max(0, Math.min(1, -rect.top / (section.offsetHeight - window.innerHeight))) * (N - 1)
+                );
+                scrollToCard(Math.max(0, Math.min(N - 1, cur + (dx < 0 ? 1 : -1))));
+            }
+        }, { passive: true });
+    }
 }
 
 function initPrelaunchForm() {
