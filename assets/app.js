@@ -65,8 +65,8 @@ function initHowItWorksVideoModal() {
     const mobileQuery = window.matchMedia('(max-width: 767px)');
     const desktopVideo = 'assets/video/Metemi-INTRO-wide_3.mp4';
     const mobileVideo = 'assets/video/Metemi-INTRO-story_3.mp4';
-    const desktopPoster = 'assets/video/posters/Metemi-INTRO-wide_3.jpg';
-    const mobilePoster = 'assets/video/posters/Metemi-INTRO-story_3.jpg';
+    const desktopPoster = 'assets/video/posters/Metemi-INTRO-wide_3.webp';
+    const mobilePoster = 'assets/video/posters/Metemi-INTRO-story_3.webp';
     let lastFocusedElement = null;
 
     function getVideoSrc() {
